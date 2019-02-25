@@ -79,11 +79,94 @@
                     <navigationItem key="navigationItem" title="My Dear Store" id="0bc-OB-aur"/>
                     <connections>
                         <outlet property="categoryTable" destination="7j3-Hi-nPU" id="b3n-dk-NN8"/>
+                        <segue destination="jrs-er-r7C" kind="show" id="fyh-T0-vZD"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="786" y="134"/>
+            <point key="canvasLocation" x="807" y="134"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="0Th-xg-kKA">
+            <objects>
+                <viewController id="jrs-er-r7C" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="oHM-ju-87Y">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="603"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Products" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3yN-Bz-Rc3">
+                                <rect key="frame" x="16" y="20" width="100" height="24"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="24" id="hpe-tD-vW0"/>
+                                    <constraint firstAttribute="width" constant="100" id="pD9-gR-AgE"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="HUQ-8c-b25">
+                                <rect key="frame" x="0.0" y="64" width="375" height="539"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="irn-66-V2P">
+                                    <size key="itemSize" width="164" height="257"/>
+                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                </collectionViewFlowLayout>
+                                <cells>
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="gaH-qf-tgK">
+                                        <rect key="frame" x="0.0" y="0.0" width="164" height="257"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO">
+                                            <rect key="frame" x="0.0" y="0.0" width="164" height="257"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" image="shirt01" translatesAutoresizingMaskIntoConstraints="NO" id="SaV-kn-mnr">
+                                                    <rect key="frame" x="0.0" y="0.0" width="164" height="178"/>
+                                                </imageView>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Sample T shirts with logo" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Nxn-AQ-e1f">
+                                                    <rect key="frame" x="2" y="181" width="160" height="47"/>
+                                                    <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="15"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="$20" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KjR-4r-VtU">
+                                                    <rect key="frame" x="2" y="229" width="29" height="24"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="24" id="dKq-68-D0Z"/>
+                                                    </constraints>
+                                                    <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                        </view>
+                                        <constraints>
+                                            <constraint firstItem="KjR-4r-VtU" firstAttribute="leading" secondItem="gaH-qf-tgK" secondAttribute="leading" constant="2" id="MKR-u8-fkm"/>
+                                            <constraint firstItem="Nxn-AQ-e1f" firstAttribute="top" secondItem="SaV-kn-mnr" secondAttribute="bottom" constant="3" id="aIR-cY-FDG"/>
+                                            <constraint firstAttribute="trailing" secondItem="Nxn-AQ-e1f" secondAttribute="trailing" constant="2" id="bAo-t0-X5q"/>
+                                            <constraint firstItem="KjR-4r-VtU" firstAttribute="top" secondItem="Nxn-AQ-e1f" secondAttribute="bottom" constant="2" id="mvV-GE-jbx"/>
+                                            <constraint firstItem="Nxn-AQ-e1f" firstAttribute="leading" secondItem="gaH-qf-tgK" secondAttribute="leading" constant="2" id="qkA-GZ-NzW"/>
+                                        </constraints>
+                                    </collectionViewCell>
+                                </cells>
+                            </collectionView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="3yN-Bz-Rc3" firstAttribute="top" secondItem="vAC-Aa-626" secondAttribute="top" constant="20" id="70G-5E-aob"/>
+                            <constraint firstItem="HUQ-8c-b25" firstAttribute="top" secondItem="3yN-Bz-Rc3" secondAttribute="bottom" constant="20" id="Eea-7P-7qo"/>
+                            <constraint firstItem="HUQ-8c-b25" firstAttribute="bottom" secondItem="vAC-Aa-626" secondAttribute="bottom" id="OEj-kB-2Xv"/>
+                            <constraint firstItem="3yN-Bz-Rc3" firstAttribute="leading" secondItem="vAC-Aa-626" secondAttribute="leading" constant="16" id="pkj-ZZ-DT5"/>
+                            <constraint firstItem="HUQ-8c-b25" firstAttribute="trailing" secondItem="vAC-Aa-626" secondAttribute="trailing" id="qSk-Ud-QUU"/>
+                            <constraint firstItem="HUQ-8c-b25" firstAttribute="leading" secondItem="vAC-Aa-626" secondAttribute="leading" id="xlP-Sb-5UI"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="vAC-Aa-626"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="UhI-Ny-TSn" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1540" y="133.5832083958021"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="3MB-yG-fMQ">
@@ -93,6 +176,7 @@
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" translucent="NO" id="07r-v8-lKX">
                         <rect key="frame" x="0.0" y="20" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
+                        <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <color key="barTintColor" red="0.3411764705882353" green="0.15294117647058825" blue="0.15686274509803921" alpha="1" colorSpace="calibratedRGB"/>
                         <textAttributes key="titleTextAttributes">
                             <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -110,5 +194,6 @@
     </scenes>
     <resources>
         <image name="digital" width="1024" height="703"/>
+        <image name="shirt01" width="500" height="500"/>
     </resources>
 </document>
