@@ -28,6 +28,25 @@ class CategoriesVC: UIViewController, UITableViewDelegate, UITableViewDataSource
             return CategoryCell()
         }
     }
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let categories = DataService.instance.getCategories()
+        let category = categories[indexPath.row]
+        performSegue(withIdentifier: "ProductsVC", sender: category)
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if let productVC = segue.destination as? ProductVC {
+            let barBtn = UIBarButtonItem()
+            barBtn.title = ""
+            navigationItem.backBarButtonItem = barBtn
+            
+            assert(sender as? Category != nil)
+            productVC.initProduct(category: sender as! Category)
+            
+         
+        }
+    }
+    
     
 
 }
