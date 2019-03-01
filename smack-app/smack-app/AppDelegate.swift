@@ -1,6 +1,6 @@
 //
 //  AppDelegate.swift
-//  slack-clone
+//  smack-app
 //
 //  Created by ishraqe manjur on 1/3/19.
 //  Copyright © 2019 ishraqe manjur. All rights reserved.
