@@ -8,20 +8,24 @@
 
 /* Begin PBXBuildFile section */
 		560223D92229A9F9007B4F4F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 560223D82229A9F9007B4F4F /* AppDelegate.swift */; };
-		560223DB2229A9F9007B4F4F /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 560223DA2229A9F9007B4F4F /* ViewController.swift */; };
+		560223DB2229A9F9007B4F4F /* ListViewOfTable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 560223DA2229A9F9007B4F4F /* ListViewOfTable.swift */; };
 		560223DE2229A9F9007B4F4F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 560223DC2229A9F9007B4F4F /* Main.storyboard */; };
 		560223E02229A9FB007B4F4F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 560223DF2229A9FB007B4F4F /* Assets.xcassets */; };
 		560223E32229A9FB007B4F4F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 560223E12229A9FB007B4F4F /* LaunchScreen.storyboard */; };
+		560223ED2229B444007B4F4F /* ParallaxCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 560223EC2229B444007B4F4F /* ParallaxCell.swift */; };
+		560223EF2229B795007B4F4F /* image+names.swift in Sources */ = {isa = PBXBuildFile; fileRef = 560223EE2229B795007B4F4F /* image+names.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		560223D52229A9F9007B4F4F /* listy-parallux-app.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "listy-parallux-app.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		560223D82229A9F9007B4F4F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		560223DA2229A9F9007B4F4F /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		560223DA2229A9F9007B4F4F /* ListViewOfTable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListViewOfTable.swift; sourceTree = "<group>"; };
 		560223DD2229A9F9007B4F4F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		560223DF2229A9FB007B4F4F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		560223E22229A9FB007B4F4F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		560223E42229A9FB007B4F4F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		560223EC2229B444007B4F4F /* ParallaxCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ParallaxCell.swift; sourceTree = "<group>"; };
+		560223EE2229B795007B4F4F /* image+names.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "image+names.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,14 +58,32 @@
 		560223D72229A9F9007B4F4F /* listy-parallux-app */ = {
 			isa = PBXGroup;
 			children = (
+				560223EB2229B41E007B4F4F /* views */,
+				560223EA2229B416007B4F4F /* controllers */,
 				560223D82229A9F9007B4F4F /* AppDelegate.swift */,
-				560223DA2229A9F9007B4F4F /* ViewController.swift */,
 				560223DC2229A9F9007B4F4F /* Main.storyboard */,
 				560223DF2229A9FB007B4F4F /* Assets.xcassets */,
 				560223E12229A9FB007B4F4F /* LaunchScreen.storyboard */,
 				560223E42229A9FB007B4F4F /* Info.plist */,
+				560223EE2229B795007B4F4F /* image+names.swift */,
 			);
 			path = "listy-parallux-app";
+			sourceTree = "<group>";
+		};
+		560223EA2229B416007B4F4F /* controllers */ = {
+			isa = PBXGroup;
+			children = (
+				560223DA2229A9F9007B4F4F /* ListViewOfTable.swift */,
+			);
+			path = controllers;
+			sourceTree = "<group>";
+		};
+		560223EB2229B41E007B4F4F /* views */ = {
+			isa = PBXGroup;
+			children = (
+				560223EC2229B444007B4F4F /* ParallaxCell.swift */,
+			);
+			path = views;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -135,7 +157,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				560223DB2229A9F9007B4F4F /* ViewController.swift in Sources */,
+				560223ED2229B444007B4F4F /* ParallaxCell.swift in Sources */,
+				560223DB2229A9F9007B4F4F /* ListViewOfTable.swift in Sources */,
+				560223EF2229B795007B4F4F /* image+names.swift in Sources */,
 				560223D92229A9F9007B4F4F /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
