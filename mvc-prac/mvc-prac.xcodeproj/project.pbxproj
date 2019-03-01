@@ -7,25 +7,33 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		5602237422294E35007B4F4F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5602237322294E35007B4F4F /* AppDelegate.swift */; };
-		5602237622294E35007B4F4F /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5602237522294E35007B4F4F /* ViewController.swift */; };
-		5602237922294E35007B4F4F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5602237722294E35007B4F4F /* Main.storyboard */; };
-		5602237B22294E39007B4F4F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5602237A22294E39007B4F4F /* Assets.xcassets */; };
-		5602237E22294E39007B4F4F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5602237C22294E39007B4F4F /* LaunchScreen.storyboard */; };
+		5602239222295A9A007B4F4F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5602239122295A9A007B4F4F /* AppDelegate.swift */; };
+		5602239422295A9A007B4F4F /* Controller.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5602239322295A9A007B4F4F /* Controller.swift */; };
+		5602239722295A9A007B4F4F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5602239522295A9A007B4F4F /* Main.storyboard */; };
+		5602239922295AA7007B4F4F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5602239822295AA7007B4F4F /* Assets.xcassets */; };
+		5602239C22295AA7007B4F4F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5602239A22295AA7007B4F4F /* LaunchScreen.storyboard */; };
+		560223A722295FB7007B4F4F /* AppleProduct.swift in Sources */ = {isa = PBXBuildFile; fileRef = 560223A622295FB7007B4F4F /* AppleProduct.swift */; };
+		560223A922296032007B4F4F /* BeautifulCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 560223A822296032007B4F4F /* BeautifulCard.swift */; };
+		560223AB22297EC9007B4F4F /* SamsungProduct.swift in Sources */ = {isa = PBXBuildFile; fileRef = 560223AA22297EC9007B4F4F /* SamsungProduct.swift */; };
+		560223AD22297F04007B4F4F /* BeautifulLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 560223AC22297F04007B4F4F /* BeautifulLabel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		5602237022294E35007B4F4F /* smack-app.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "smack-app.app"; sourceTree = BUILT_PRODUCTS_DIR; };
-		5602237322294E35007B4F4F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		5602237522294E35007B4F4F /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		5602237822294E35007B4F4F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		5602237A22294E39007B4F4F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		5602237D22294E39007B4F4F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
-		5602237F22294E39007B4F4F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		5602238E22295A9A007B4F4F /* mvc-prac.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "mvc-prac.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		5602239122295A9A007B4F4F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		5602239322295A9A007B4F4F /* Controller.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Controller.swift; sourceTree = "<group>"; };
+		5602239622295A9A007B4F4F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		5602239822295AA7007B4F4F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		5602239B22295AA7007B4F4F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		5602239D22295AA7007B4F4F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		560223A622295FB7007B4F4F /* AppleProduct.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppleProduct.swift; sourceTree = "<group>"; };
+		560223A822296032007B4F4F /* BeautifulCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BeautifulCard.swift; sourceTree = "<group>"; };
+		560223AA22297EC9007B4F4F /* SamsungProduct.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SamsungProduct.swift; sourceTree = "<group>"; };
+		560223AC22297F04007B4F4F /* BeautifulLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BeautifulLabel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		5602236D22294E35007B4F4F /* Frameworks */ = {
+		5602238B22295A9A007B4F4F /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -35,71 +43,99 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		5602236722294E35007B4F4F = {
+		5602238522295A9A007B4F4F = {
 			isa = PBXGroup;
 			children = (
-				5602237222294E35007B4F4F /* smack-app */,
-				5602237122294E35007B4F4F /* Products */,
+				5602239022295A9A007B4F4F /* mvc-prac */,
+				5602238F22295A9A007B4F4F /* Products */,
 			);
 			sourceTree = "<group>";
 		};
-		5602237122294E35007B4F4F /* Products */ = {
+		5602238F22295A9A007B4F4F /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				5602237022294E35007B4F4F /* smack-app.app */,
+				5602238E22295A9A007B4F4F /* mvc-prac.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		5602237222294E35007B4F4F /* smack-app */ = {
+		5602239022295A9A007B4F4F /* mvc-prac */ = {
 			isa = PBXGroup;
 			children = (
-				5602237322294E35007B4F4F /* AppDelegate.swift */,
-				5602237522294E35007B4F4F /* ViewController.swift */,
-				5602237722294E35007B4F4F /* Main.storyboard */,
-				5602237A22294E39007B4F4F /* Assets.xcassets */,
-				5602237C22294E39007B4F4F /* LaunchScreen.storyboard */,
-				5602237F22294E39007B4F4F /* Info.plist */,
+				560223A522295ACC007B4F4F /* Controllers */,
+				560223A422295AC4007B4F4F /* View */,
+				560223A322295ABB007B4F4F /* Model */,
+				5602239122295A9A007B4F4F /* AppDelegate.swift */,
+				5602239522295A9A007B4F4F /* Main.storyboard */,
+				5602239822295AA7007B4F4F /* Assets.xcassets */,
+				5602239A22295AA7007B4F4F /* LaunchScreen.storyboard */,
+				5602239D22295AA7007B4F4F /* Info.plist */,
 			);
-			path = "smack-app";
+			path = "mvc-prac";
+			sourceTree = "<group>";
+		};
+		560223A322295ABB007B4F4F /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				560223A622295FB7007B4F4F /* AppleProduct.swift */,
+				560223AA22297EC9007B4F4F /* SamsungProduct.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		560223A422295AC4007B4F4F /* View */ = {
+			isa = PBXGroup;
+			children = (
+				560223A822296032007B4F4F /* BeautifulCard.swift */,
+				560223AC22297F04007B4F4F /* BeautifulLabel.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		560223A522295ACC007B4F4F /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				5602239322295A9A007B4F4F /* Controller.swift */,
+			);
+			path = Controllers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		5602236F22294E35007B4F4F /* smack-app */ = {
+		5602238D22295A9A007B4F4F /* mvc-prac */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 5602238222294E39007B4F4F /* Build configuration list for PBXNativeTarget "smack-app" */;
+			buildConfigurationList = 560223A022295AA7007B4F4F /* Build configuration list for PBXNativeTarget "mvc-prac" */;
 			buildPhases = (
-				5602236C22294E35007B4F4F /* Sources */,
-				5602236D22294E35007B4F4F /* Frameworks */,
-				5602236E22294E35007B4F4F /* Resources */,
+				5602238A22295A9A007B4F4F /* Sources */,
+				5602238B22295A9A007B4F4F /* Frameworks */,
+				5602238C22295A9A007B4F4F /* Resources */,
 			);
 			buildRules = (
 			);
 			dependencies = (
 			);
-			name = "smack-app";
-			productName = "smack-app";
-			productReference = 5602237022294E35007B4F4F /* smack-app.app */;
+			name = "mvc-prac";
+			productName = "mvc-prac";
+			productReference = 5602238E22295A9A007B4F4F /* mvc-prac.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
-		5602236822294E35007B4F4F /* Project object */ = {
+		5602238622295A9A007B4F4F /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 1010;
 				LastUpgradeCheck = 1010;
 				ORGANIZATIONNAME = "ishraqe manjur";
 				TargetAttributes = {
-					5602236F22294E35007B4F4F = {
+					5602238D22295A9A007B4F4F = {
 						CreatedOnToolsVersion = 10.1;
 					};
 				};
 			};
-			buildConfigurationList = 5602236B22294E35007B4F4F /* Build configuration list for PBXProject "smack-app" */;
+			buildConfigurationList = 5602238922295A9A007B4F4F /* Build configuration list for PBXProject "mvc-prac" */;
 			compatibilityVersion = "Xcode 9.3";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -107,54 +143,58 @@
 				en,
 				Base,
 			);
-			mainGroup = 5602236722294E35007B4F4F;
-			productRefGroup = 5602237122294E35007B4F4F /* Products */;
+			mainGroup = 5602238522295A9A007B4F4F;
+			productRefGroup = 5602238F22295A9A007B4F4F /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				5602236F22294E35007B4F4F /* smack-app */,
+				5602238D22295A9A007B4F4F /* mvc-prac */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
-		5602236E22294E35007B4F4F /* Resources */ = {
+		5602238C22295A9A007B4F4F /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				5602237E22294E39007B4F4F /* LaunchScreen.storyboard in Resources */,
-				5602237B22294E39007B4F4F /* Assets.xcassets in Resources */,
-				5602237922294E35007B4F4F /* Main.storyboard in Resources */,
+				5602239C22295AA7007B4F4F /* LaunchScreen.storyboard in Resources */,
+				5602239922295AA7007B4F4F /* Assets.xcassets in Resources */,
+				5602239722295A9A007B4F4F /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
-		5602236C22294E35007B4F4F /* Sources */ = {
+		5602238A22295A9A007B4F4F /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				5602237622294E35007B4F4F /* ViewController.swift in Sources */,
-				5602237422294E35007B4F4F /* AppDelegate.swift in Sources */,
+				560223AD22297F04007B4F4F /* BeautifulLabel.swift in Sources */,
+				560223AB22297EC9007B4F4F /* SamsungProduct.swift in Sources */,
+				560223A722295FB7007B4F4F /* AppleProduct.swift in Sources */,
+				560223A922296032007B4F4F /* BeautifulCard.swift in Sources */,
+				5602239422295A9A007B4F4F /* Controller.swift in Sources */,
+				5602239222295A9A007B4F4F /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		5602237722294E35007B4F4F /* Main.storyboard */ = {
+		5602239522295A9A007B4F4F /* Main.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
-				5602237822294E35007B4F4F /* Base */,
+				5602239622295A9A007B4F4F /* Base */,
 			);
 			name = Main.storyboard;
 			sourceTree = "<group>";
 		};
-		5602237C22294E39007B4F4F /* LaunchScreen.storyboard */ = {
+		5602239A22295AA7007B4F4F /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
-				5602237D22294E39007B4F4F /* Base */,
+				5602239B22295AA7007B4F4F /* Base */,
 			);
 			name = LaunchScreen.storyboard;
 			sourceTree = "<group>";
@@ -162,7 +202,7 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
-		5602238022294E39007B4F4F /* Debug */ = {
+		5602239E22295AA7007B4F4F /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -223,7 +263,7 @@
 			};
 			name = Debug;
 		};
-		5602238122294E39007B4F4F /* Release */ = {
+		5602239F22295AA7007B4F4F /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -278,36 +318,36 @@
 			};
 			name = Release;
 		};
-		5602238322294E39007B4F4F /* Debug */ = {
+		560223A122295AA7007B4F4F /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 4A7XK4Q3M4;
-				INFOPLIST_FILE = "smack-app/Info.plist";
+				INFOPLIST_FILE = "mvc-prac/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "com.smack-app";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.mvc-prac";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
 		};
-		5602238422294E39007B4F4F /* Release */ = {
+		560223A222295AA7007B4F4F /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 4A7XK4Q3M4;
-				INFOPLIST_FILE = "smack-app/Info.plist";
+				INFOPLIST_FILE = "mvc-prac/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "com.smack-app";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.mvc-prac";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -317,25 +357,25 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		5602236B22294E35007B4F4F /* Build configuration list for PBXProject "smack-app" */ = {
+		5602238922295A9A007B4F4F /* Build configuration list for PBXProject "mvc-prac" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				5602238022294E39007B4F4F /* Debug */,
-				5602238122294E39007B4F4F /* Release */,
+				5602239E22295AA7007B4F4F /* Debug */,
+				5602239F22295AA7007B4F4F /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		5602238222294E39007B4F4F /* Build configuration list for PBXNativeTarget "smack-app" */ = {
+		560223A022295AA7007B4F4F /* Build configuration list for PBXNativeTarget "mvc-prac" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				5602238322294E39007B4F4F /* Debug */,
-				5602238422294E39007B4F4F /* Release */,
+				560223A122295AA7007B4F4F /* Debug */,
+				560223A222295AA7007B4F4F /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
-	rootObject = 5602236822294E35007B4F4F /* Project object */;
+	rootObject = 5602238622295A9A007B4F4F /* Project object */;
 }
