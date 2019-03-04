@@ -42,17 +42,9 @@
         <scene sceneID="m2x-2Z-5HV">
             <objects>
                 <viewController id="xjZ-8S-SVl" customClass="ChannelVC" customModule="smack_app" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="UOn-7r-ERD">
+                    <view key="view" contentMode="scaleToFill" id="UOn-7r-ERD" customClass="GradientView" customModule="smack_app" customModuleProvider="target">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="FKp-se-aaG">
-                                <rect key="frame" x="47" y="156" width="375" height="667"/>
-                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <viewLayoutGuide key="safeArea" id="lem-L1-UEK"/>
-                            </view>
-                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="hvb-jZ-oJY"/>
                     </view>
@@ -111,7 +103,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ese-5O-CRj" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="748" y="288"/>
+            <point key="canvasLocation" x="505" y="293"/>
         </scene>
     </scenes>
     <resources>
