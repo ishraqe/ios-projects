@@ -21,7 +21,7 @@ class ListViewOfTable: UITableViewController {
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         guard let cell = tableView.dequeueReusableCell(withIdentifier: "parallaxCell", for: indexPath) as? ParallaxCell
             else { return UITableViewCell() }
-            print(imageArray[indexPath.row])
+          
         cell.configureCell(withImage: imageArray[indexPath.row], withDesc: nameArray[indexPath.row])
         
         return cell
