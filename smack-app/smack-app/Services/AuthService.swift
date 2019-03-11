@@ -56,4 +56,42 @@ class AuthService {
             }
         }
     }
+    
+    func loginUser (email: String, pass:  String, completion: @escaping CompletionHandler){
+        let lowercaseEmail = email.lowercased()
+        
+        let header = [
+            "Content-Type" : "application/json; charset=utf-8"
+        ]
+        
+        let body: [String: Any] = [
+            "email": lowercaseEmail,
+            "pssword" : pass
+        ]
+        
+        Alamofire.request(URL_LOGIN, method: .post, parameters: body, encoding: JSONEncoding.default, headers: header).responseJSON { (response) in
+            
+            if response.result.error == nil {
+                if let json = response.result.value as? Dictionary<String, Any>{
+                    if let email = json["user"] as? String {
+                        self.userEmail = email
+                    }
+                    if let token = json["token"] as? String {
+                        self.authToken = token
+                    }
+                }
+               
+                self.isLoggedIn = true
+                completion(true)
+                
+            }else {
+                completion(false)
+                debugPrint(response.result.error as Any)
+            }
+        }
+        
+        
+        
+        
+    }
 }
