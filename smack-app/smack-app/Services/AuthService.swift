@@ -41,15 +41,16 @@ class AuthService {
             "Content-Type" : "application/json; charset=utf-8"
         ]
         
-        let body: [String: Any] = [
+        let parameters: [String: Any] = [
             "email": lowercaseEmail,
-            "pssword" : password
+            "password" : password
         ]
-        Alamofire.request(URL_REGISTER, method: .post, parameters: body, encoding: JSONEncoding.default , headers: header).responseString { (response) in
+        print(email, password,"in auth service")
+        Alamofire.request(URL_REGISTER, method: .post, parameters: parameters, encoding: JSONEncoding.default , headers: header).responseString { (response) in
             if response.result.error == nil {
                 completion(true)
                 
-                
+                print(response)
             }else {
                 completion(false)
                 debugPrint(response.result.error as Any)
@@ -57,7 +58,7 @@ class AuthService {
         }
     }
     
-    func loginUser (email: String, pass:  String, completion: @escaping CompletionHandler){
+    func loginUser (email: String, password:  String, completion: @escaping CompletionHandler){
         let lowercaseEmail = email.lowercased()
         
         let header = [
@@ -66,7 +67,7 @@ class AuthService {
         
         let body: [String: Any] = [
             "email": lowercaseEmail,
-            "pssword" : pass
+            "password" : password
         ]
         
         Alamofire.request(URL_LOGIN, method: .post, parameters: body, encoding: JSONEncoding.default, headers: header).responseJSON { (response) in
@@ -89,9 +90,5 @@ class AuthService {
                 debugPrint(response.result.error as Any)
             }
         }
-        
-        
-        
-        
     }
 }

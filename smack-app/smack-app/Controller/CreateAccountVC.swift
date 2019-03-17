@@ -9,6 +9,9 @@ class CreateAccountVC: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        let tap: UITapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(self.dismissKeyboard))
+        view.addGestureRecognizer(tap)
     }
     
     @IBAction func colseCreateVCPressed(_ sender: Any) {
@@ -23,15 +26,26 @@ class CreateAccountVC: UIViewController {
         
         guard let email = emailText.text, emailText.text != "" else {return}
         guard let pass = passTxt.text, passTxt.text != "" else {return}
-        print(email, pass)
+        
         AuthService.instance.registeruser(email: email, password: pass) { (success) in
             if success {
-                print("registered user!")
+               
+                AuthService.instance.loginUser(email: email, password: pass, completion: { (success) in
+                    if success {
+                        print("user logged in", AuthService.instance.authToken)
+                    }
+                }
+                )
+                
+                
             }else {
                 print("something went wrong")
             }
         }
         
+    }
+    @objc func dismissKeyboard() {
+        view.endEditing(true)
     }
     
    
