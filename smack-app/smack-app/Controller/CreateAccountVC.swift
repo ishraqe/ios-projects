@@ -22,6 +22,7 @@ class CreateAccountVC: UIViewController {
         performSegue(withIdentifier: Unwind, sender: nil)
     }
     @IBAction func chooseAvatarPressed(_ sender: Any) {
+        performSegue(withIdentifier: TO_AVATAR_PICKER, sender: nil)
     }
     @IBAction func generateAvatarPressed(_ sender: Any) {
     }

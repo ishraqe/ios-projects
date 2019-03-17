@@ -15,6 +15,7 @@ let URL_USER_ADD = "\(BASE_URL)user/add"
 let TO_Login = "toLogin"
 let To_Create_Account = "to_Create_account"
 let Unwind = "unwindToSeque"
+let TO_AVATAR_PICKER = "toAvatarPicker"
 
 
 // User defaults
