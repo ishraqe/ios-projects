@@ -62,7 +62,7 @@
                                 <rect key="frame" x="281" y="89" width="22" height="22"/>
                                 <state key="normal" image="addChannelButton"/>
                             </button>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="menuProfileIcon" translatesAutoresizingMaskIntoConstraints="NO" id="VEx-dc-aUE">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="menuProfileIcon" translatesAutoresizingMaskIntoConstraints="NO" id="VEx-dc-aUE" customClass="CircleImage" customModule="smack_app" customModuleProvider="target">
                                 <rect key="frame" x="20" y="572" width="75" height="75"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="75" id="VQE-b5-xbc"/>
@@ -415,7 +415,7 @@
                                 <color key="textColor" red="0.0" green="0.25882352939999997" blue="0.70588235290000001" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="menuProfileIcon" translatesAutoresizingMaskIntoConstraints="NO" id="TGr-2g-RSQ">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="menuProfileIcon" translatesAutoresizingMaskIntoConstraints="NO" id="TGr-2g-RSQ" customClass="CircleImage" customModule="smack_app" customModuleProvider="target">
                                 <rect key="frame" x="137.5" y="298.5" width="100" height="100"/>
                                 <color key="backgroundColor" cocoaTouchSystemColor="scrollViewTexturedBackgroundColor"/>
                                 <constraints>
@@ -435,6 +435,10 @@
                                     <action selector="generateAvatarPressed:" destination="PeC-GN-XJg" eventType="touchUpInside" id="rqh-ch-aTw"/>
                                 </connections>
                             </button>
+                            <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" style="whiteLarge" translatesAutoresizingMaskIntoConstraints="NO" id="Cx6-2B-swT">
+                                <rect key="frame" x="169" y="215" width="37" height="37"/>
+                                <color key="color" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </activityIndicatorView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
@@ -442,10 +446,12 @@
                             <constraint firstItem="ArK-DR-xGK" firstAttribute="top" secondItem="V1G-Gf-jVx" secondAttribute="top" constant="40" id="Auq-Xt-K1h"/>
                             <constraint firstItem="Jiq-IU-geg" firstAttribute="top" secondItem="TGr-2g-RSQ" secondAttribute="top" id="JYP-Rn-E2I"/>
                             <constraint firstItem="ec2-lD-cRV" firstAttribute="centerX" secondItem="Kf8-l5-uVP" secondAttribute="centerX" id="MaI-gc-hsq"/>
+                            <constraint firstItem="Cx6-2B-swT" firstAttribute="centerX" secondItem="Kf8-l5-uVP" secondAttribute="centerX" id="NrG-Hk-tzK"/>
                             <constraint firstItem="ec2-lD-cRV" firstAttribute="top" secondItem="Jiq-IU-geg" secondAttribute="bottom" id="STT-GE-dmE"/>
                             <constraint firstItem="Fy6-it-7s4" firstAttribute="top" secondItem="V1G-Gf-jVx" secondAttribute="top" constant="8" id="SWD-x7-6eC"/>
                             <constraint firstItem="Y5b-8o-wQ8" firstAttribute="centerX" secondItem="Kf8-l5-uVP" secondAttribute="centerX" id="Tgp-go-vZn"/>
                             <constraint firstItem="Y5b-8o-wQ8" firstAttribute="top" secondItem="ArK-DR-xGK" secondAttribute="bottom" constant="40" id="Uy9-0y-tJp"/>
+                            <constraint firstItem="Cx6-2B-swT" firstAttribute="centerY" secondItem="Kf8-l5-uVP" secondAttribute="centerY" constant="-100" id="XHh-CG-MBm"/>
                             <constraint firstItem="ArK-DR-xGK" firstAttribute="centerX" secondItem="Kf8-l5-uVP" secondAttribute="centerX" id="bCZ-zf-ef4"/>
                             <constraint firstItem="3gR-6t-ouR" firstAttribute="centerX" secondItem="Kf8-l5-uVP" secondAttribute="centerX" id="gal-91-UWc"/>
                             <constraint firstItem="V1G-Gf-jVx" firstAttribute="bottom" secondItem="3gR-6t-ouR" secondAttribute="bottom" constant="20" id="rDb-nx-Arm"/>
@@ -459,6 +465,7 @@
                     <connections>
                         <outlet property="emailText" destination="L4Q-Eg-FSM" id="ZYS-k5-U0z"/>
                         <outlet property="passTxt" destination="S6O-dU-K3S" id="QYF-7D-u2P"/>
+                        <outlet property="spinner" destination="Cx6-2B-swT" id="9kS-p3-xMl"/>
                         <outlet property="userImg" destination="TGr-2g-RSQ" id="3Wd-6Z-gQk"/>
                         <outlet property="usernameTxt" destination="MHY-S3-GEf" id="R41-5L-Bis"/>
                         <segue destination="880-CH-Qkj" kind="unwind" identifier="unwindToSeque" unwindAction="prepareUnwindSegueWithSegue:" id="bAS-gE-K3j"/>

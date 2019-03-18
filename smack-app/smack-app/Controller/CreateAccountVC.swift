@@ -7,6 +7,7 @@ class CreateAccountVC: UIViewController {
     @IBOutlet weak var passTxt: UITextField!
     @IBOutlet weak var userImg: UIImageView!
     
+    @IBOutlet weak var spinner: UIActivityIndicatorView!
     // Default variables
     var avatarName = "profileDefault"
     var avatarColor = "[0.5,0.5,0.5,1]"
@@ -14,7 +15,7 @@ class CreateAccountVC: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+        setupView()
         let tap: UITapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(self.dismissKeyboard))
         view.addGestureRecognizer(tap)
     }
@@ -36,11 +37,17 @@ class CreateAccountVC: UIViewController {
         let r = CGFloat(arc4random_uniform(255)) / 255
          let g = CGFloat(arc4random_uniform(255)) / 255
          let b = CGFloat(arc4random_uniform(255)) / 255
-        bgColor = UIColor(red: r, green: g, blue: b, alpha: 1)
-        self.userImg.backgroundColor = bgColor
+         bgColor = UIColor(red: r, green: g, blue: b, alpha: 1)
+        UIView.animate(withDuration: 0.2) {
+               self.userImg.backgroundColor = self.bgColor
+        }
+       
+     
     }
     
     @IBAction func createAccount(_ sender: Any) {
+        spinner.isHidden = false
+        spinner.startAnimating()
         guard let name = usernameTxt.text, usernameTxt.text != "" else {return}
         guard let email = emailText.text, emailText.text != "" else {return}
         guard let pass = passTxt.text, passTxt.text != "" else {return}
@@ -51,7 +58,8 @@ class CreateAccountVC: UIViewController {
                     if success {
                         AuthService.instance.createUser(name: name, email: email, avatarColor: self.avatarColor, avatarName: self.avatarName, completion: { (success) in
                             if success {
-                                print(UserDataService.instance.avatarColor)
+                               self.spinner.isHidden = true
+                                self.spinner.stopAnimating()
                                 self.performSegue(withIdentifier: Unwind, sender: nil)
                             }
                         })
@@ -59,13 +67,21 @@ class CreateAccountVC: UIViewController {
                 }
                 )
                 
-                
             }else {
                 print("something went wrong")
             }
         }
         
     }
+    
+    func setupView(){
+        spinner.isHidden = true
+        usernameTxt.attributedPlaceholder = NSAttributedString(string: "username", attributes: [NSAttributedString.Key.foregroundColor:  smack_purple_color])
+        
+        emailText.attributedPlaceholder = NSAttributedString(string: "email", attributes: [NSAttributedString.Key.foregroundColor :  smack_purple_color])
+        passTxt.attributedPlaceholder = NSAttributedString(string: "password", attributes: [NSAttributedString.Key.foregroundColor :  smack_purple_color])
+    }
+    
     @objc func dismissKeyboard() {
         view.endEditing(true)
     }
