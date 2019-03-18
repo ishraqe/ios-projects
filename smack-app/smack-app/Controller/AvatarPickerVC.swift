@@ -14,7 +14,11 @@ class AvatarPickerVC: UIViewController, UICollectionViewDelegate, UICollectionVi
 
     }
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        if let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "avatarCell", for: indexPath) as? AvatarCell {
+//        if let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "myAvatarImage", for: indexPath) as? myAvatarImage {
+//            cell.configureCell(index: indexPath.item, type: avatarType)
+//            return cell
+        
+        if let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "AvatarImg", for: indexPath) as? AvatarCell {
             cell.configureCell(index: indexPath.item, type: avatarType)
             return cell
         }
@@ -34,6 +38,12 @@ class AvatarPickerVC: UIViewController, UICollectionViewDelegate, UICollectionVi
     }
     
     @IBAction func segmentedChange(_ sender: Any) {
+        if(segmentedControl.selectedSegmentIndex == 0) {
+            avatarType = .dark
+        }else {
+            avatarType = .light
+        }
+        collectionView.reloadData()
     }
     
 }

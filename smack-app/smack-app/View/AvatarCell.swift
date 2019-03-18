@@ -6,8 +6,8 @@ enum AvatarType {
 }
 
 class AvatarCell: UICollectionViewCell {
+    @IBOutlet weak var avatarImg: UIImageView!
     
-    @IBOutlet weak var avImg: UIImageView!
     override func awakeFromNib() {
         super.awakeFromNib()
         setupView()
@@ -15,11 +15,12 @@ class AvatarCell: UICollectionViewCell {
     
     
     func configureCell(index: Int, type: AvatarType) {
+
         if type == AvatarType.dark {
-            avImg.image = UIImage(named: "dark\(index)")
+           avatarImg.image = UIImage(named: "dark\(index)")
             self.layer.backgroundColor = UIColor.lightGray.cgColor
         }else {
-            avImg.image = UIImage(named: "light\(index)")
+             avatarImg.image = UIImage(named: "light\(index)")
             self.layer.backgroundColor = UIColor.gray.cgColor
         }
     }
