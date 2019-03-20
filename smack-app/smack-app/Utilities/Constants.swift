@@ -14,6 +14,10 @@ let URL_USER_ADD = "\(BASE_URL)user/add"
 // color
 let smack_purple_color = #colorLiteral(red: 0.1960784314, green: 0.4784313725, blue: 1, alpha: 0.5)
 
+//Notifications
+
+let NOTIF_USER_DATA_CHANGED = Notification.Name("notifUserDataChanged")
+
 
 //seques
 let TO_Login = "toLogin"
