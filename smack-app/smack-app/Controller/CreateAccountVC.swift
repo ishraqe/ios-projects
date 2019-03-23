@@ -16,8 +16,7 @@ class CreateAccountVC: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         setupView()
-        let tap: UITapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(self.dismissKeyboard))
-        view.addGestureRecognizer(tap)
+        
     }
     
     override func viewDidAppear(_ animated: Bool) {
@@ -37,11 +36,13 @@ class CreateAccountVC: UIViewController {
         let r = CGFloat(arc4random_uniform(255)) / 255
          let g = CGFloat(arc4random_uniform(255)) / 255
          let b = CGFloat(arc4random_uniform(255)) / 255
+        
+        
         avatarColor = "[\(r),\(g),\(b),1]"
          bgColor = UIColor(red: r, green: g, blue: b, alpha: 1)
-        UIView.animate(withDuration: 0.2) {
-               self.userImg.backgroundColor = self.bgColor
-        }
+            UIView.animate(withDuration: 0.2) {
+                   self.userImg.backgroundColor = self.bgColor
+            }
        
      
     }
@@ -82,6 +83,8 @@ class CreateAccountVC: UIViewController {
         
         emailText.attributedPlaceholder = NSAttributedString(string: "email", attributes: [NSAttributedString.Key.foregroundColor :  smack_purple_color])
         passTxt.attributedPlaceholder = NSAttributedString(string: "password", attributes: [NSAttributedString.Key.foregroundColor :  smack_purple_color])
+        let tap: UITapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(self.dismissKeyboard))
+        view.addGestureRecognizer(tap)
     }
     
     @objc func dismissKeyboard() {

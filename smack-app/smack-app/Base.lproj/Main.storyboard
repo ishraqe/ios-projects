@@ -229,11 +229,19 @@
                                 <state key="normal" title="Login">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
+                                <connections>
+                                    <action selector="loginBtnPressed:" destination="4jn-qy-ao2" eventType="touchUpInside" id="gGz-s6-zyQ"/>
+                                </connections>
                             </button>
+                            <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" style="whiteLarge" translatesAutoresizingMaskIntoConstraints="NO" id="Jvj-j7-avT">
+                                <rect key="frame" x="169" y="215" width="37" height="37"/>
+                                <color key="color" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </activityIndicatorView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="TW7-dX-mHZ" firstAttribute="centerX" secondItem="NwO-zg-DJv" secondAttribute="centerX" id="9jO-Uy-jo2"/>
+                            <constraint firstItem="Jvj-j7-avT" firstAttribute="centerY" secondItem="NwO-zg-DJv" secondAttribute="centerY" constant="-100" id="CgV-lb-Pxt"/>
                             <constraint firstItem="uHB-cW-WDk" firstAttribute="top" secondItem="Co3-Mq-YId" secondAttribute="bottom" constant="40" id="Djq-cp-XLD"/>
                             <constraint firstItem="TW7-dX-mHZ" firstAttribute="top" secondItem="mYp-7g-5Ca" secondAttribute="top" constant="60" id="MX9-hK-1iL"/>
                             <constraint firstItem="Co3-Mq-YId" firstAttribute="centerX" secondItem="NwO-zg-DJv" secondAttribute="centerX" id="VuT-m9-wnD"/>
@@ -243,10 +251,14 @@
                             <constraint firstItem="zn0-XC-9Ft" firstAttribute="centerX" secondItem="NwO-zg-DJv" secondAttribute="centerX" id="r8r-IO-Joq"/>
                             <constraint firstItem="A6X-i7-dzz" firstAttribute="top" secondItem="mYp-7g-5Ca" secondAttribute="top" constant="8" id="sCx-OA-OO6"/>
                             <constraint firstItem="Co3-Mq-YId" firstAttribute="top" secondItem="TW7-dX-mHZ" secondAttribute="bottom" constant="40" id="tFi-Bv-VUj"/>
+                            <constraint firstItem="Jvj-j7-avT" firstAttribute="centerX" secondItem="NwO-zg-DJv" secondAttribute="centerX" id="uDz-k8-GeE"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="mYp-7g-5Ca"/>
                     </view>
                     <connections>
+                        <outlet property="emailTxt" destination="vTj-kN-kyA" id="INu-xr-1hq"/>
+                        <outlet property="pasTxt" destination="PgC-fO-YGa" id="ahI-Od-mnh"/>
+                        <outlet property="spinner" destination="Jvj-j7-avT" id="WJQ-ah-G4F"/>
                         <segue destination="PeC-GN-XJg" kind="show" identifier="to_Create_account" id="6xU-OT-as3"/>
                     </connections>
                 </viewController>
