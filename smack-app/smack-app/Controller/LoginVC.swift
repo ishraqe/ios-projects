@@ -20,12 +20,12 @@ class LoginVC: UIViewController {
         performSegue(withIdentifier: To_Create_Account  , sender: nil)
     }
     @IBAction func loginBtnPressed(_ sender: Any) {
-        spinner.isHidden = true
+        spinner.isHidden = false
         spinner.startAnimating()
         
         guard let email = emailTxt.text, emailTxt.text != "" else {return}
          guard let password = pasTxt.text, pasTxt.text != "" else {return}
-        print(email, password)
+      
         
         AuthService.instance.loginUser(email: email, password: password) { (success) in
             if(success){

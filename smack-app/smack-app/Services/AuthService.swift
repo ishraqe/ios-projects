@@ -46,12 +46,10 @@ class AuthService {
             "email": lowercaseEmail,
             "password" : password
         ]
-        print(email, password,"in auth service")
+
         Alamofire.request(URL_REGISTER, method: .post, parameters: parameters, encoding: JSONEncoding.default , headers: header).responseString { (response) in
             if response.result.error == nil {
                 completion(true)
-                
-                print(response)
             }else {
                 completion(false)
                 debugPrint(response.result.error as Any)
@@ -120,11 +118,14 @@ class AuthService {
             }
         }
     }
+    
     func finUserByEmail(completion: @escaping CompletionHandler) {
-        
-        Alamofire.request("\(URL_FIND_USER_BY_EMAIL)\(AuthService.instance.userEmail)", method: .get, parameters: nil, encoding: JSONEncoding.default, headers: BEARER_HEADER ).responseJSON { (response) in
+        let url = "\(URL_FIND_USER_BY_EMAIL)\(AuthService.instance.userEmail)"
+       
+        Alamofire.request(url, method: .get, parameters: nil, encoding: JSONEncoding.default, headers: BEARER_HEADER ).responseJSON { (response) in
             if response.result.error == nil {
                 guard let data = response.data else {return}
+             
                 self.setUserdata(data: data)
                 completion(true)
             } else {
