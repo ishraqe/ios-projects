@@ -58,7 +58,7 @@
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="v19-OC-1em">
+                            <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="v19-OC-1em">
                                 <rect key="frame" x="281" y="89" width="22" height="22"/>
                                 <state key="normal" image="addChannelButton"/>
                                 <connections>
@@ -133,6 +133,7 @@
                         <viewLayoutGuide key="safeArea" id="hvb-jZ-oJY"/>
                     </view>
                     <connections>
+                        <outlet property="addChannelBtn" destination="v19-OC-1em" id="YcP-4k-ZYs"/>
                         <outlet property="loginBtn" destination="o5N-y7-TOo" id="2ne-th-wx6"/>
                         <outlet property="tableView" destination="Afd-0y-eDM" id="UVD-Ai-Zsu"/>
                         <outlet property="userImg" destination="VEx-dc-aUE" id="9q8-i3-Vcg"/>
@@ -318,6 +319,7 @@
                         <viewLayoutGuide key="safeArea" id="5Ne-cm-0gE"/>
                     </view>
                     <connections>
+                        <outlet property="chatLabel" destination="ghZ-mi-4lr" id="2GF-0q-o44"/>
                         <outlet property="menuBtn" destination="aQz-eN-qbH" id="Oos-In-i0m"/>
                     </connections>
                 </viewController>

@@ -18,8 +18,8 @@ let smack_purple_color = #colorLiteral(red: 0.1960784314, green: 0.4784313725, b
 //Notifications
 
 let NOTIF_USER_DATA_CHANGED = Notification.Name("notifUserDataChanged")
-
-
+let NOTIF_CHANNELS_DATA_CHANGED = Notification.Name("notifChannelDataChanged")
+let NOTIF_CHANNELS_DATA_SELECTED = Notification.Name("notifChannelDataSelected")
 //seques
 let TO_Login = "toLogin"
 let To_Create_Account = "to_Create_account"
