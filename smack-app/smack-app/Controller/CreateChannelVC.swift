@@ -1,11 +1,3 @@
-//
-//  CreateChannelVC.swift
-//  smack-app
-//
-//  Created by ishraqe manjur on 27/3/19.
-//  Copyright © 2019 Ishraqe Manjur. All rights reserved.
-//
-
 import UIKit
 
 class CreateChannelVC: UIViewController {
@@ -23,6 +15,14 @@ class CreateChannelVC: UIViewController {
         self.dismiss(animated: true, completion: nil)
     }
     @IBAction func createChannelPressed(_ sender: Any) {
+        guard let name = nextText.text, nextText.text != "" else {return}
+        guard let desc = descText.text else {return}
+        
+        SocketService.instance.addChannel(ChannelName: name, ChannelDesc: desc) { (success) in
+            if success {
+                 self.dismiss(animated: true, completion: nil)
+            }
+        }
     }
     func setupView(){
         nextText.attributedPlaceholder =  NSAttributedString(string: "Name", attributes: [NSAttributedString.Key.foregroundColor: smack_purple_color])

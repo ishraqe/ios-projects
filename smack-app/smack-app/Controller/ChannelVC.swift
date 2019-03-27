@@ -17,6 +17,11 @@ class ChannelVC: UIViewController, UITableViewDataSource, UITableViewDelegate {
         self.revealViewController()?.rearViewRevealWidth = self.view.frame.size.width - 60
         NotificationCenter.default.addObserver(self, selector: #selector(ChannelVC.UserDataDidCanged(_:)), name: NOTIF_USER_DATA_CHANGED, object: nil)
         
+        SocketService.instance.getChannels { (success) in
+            if success {
+                self.tableView.reloadData()
+            }
+        }
     }
     override func viewDidAppear(_ animated: Bool) {
         setupUserInfo()
