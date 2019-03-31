@@ -14,6 +14,7 @@ class MessageCell: UITableViewCell {
     }
     
     func configureCell(message: Message) {
+        print(message)
         messageLabel.text = message.message
         usernameLabel.text = message.userName
         userImg.image = UIImage(named: message.userAvatar)

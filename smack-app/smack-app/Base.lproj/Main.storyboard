@@ -317,6 +317,9 @@
                                 <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="17"/>
                                 <textInputTraits key="textInputTraits"/>
+                                <connections>
+                                    <action selector="messageBoxEditing:" destination="qZ6-Fq-UM5" eventType="editingChanged" id="RW7-DS-A9W"/>
+                                </connections>
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yx8-NC-ZAs">
                                 <rect key="frame" x="339" y="632" width="30" height="30"/>
@@ -388,15 +391,23 @@
                                     </tableViewCell>
                                 </prototypes>
                             </tableView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="dadad" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9H3-d1-mZa">
+                                <rect key="frame" x="8" y="601" width="43" height="18"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="15"/>
+                                <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="slk-II-s8C" firstAttribute="top" secondItem="jQ5-h8-FdT" secondAttribute="top" id="3HP-pD-MuR"/>
                             <constraint firstItem="5Ne-cm-0gE" firstAttribute="trailing" secondItem="Lyg-f8-c8l" secondAttribute="trailing" id="4Dg-Sw-bzq"/>
                             <constraint firstItem="yx8-NC-ZAs" firstAttribute="centerY" secondItem="YEh-pe-yDu" secondAttribute="centerY" id="7YR-HJ-VPU"/>
+                            <constraint firstItem="YEh-pe-yDu" firstAttribute="top" secondItem="9H3-d1-mZa" secondAttribute="bottom" constant="8" id="93C-JH-1Nd"/>
                             <constraint firstItem="slk-II-s8C" firstAttribute="leading" secondItem="5Ne-cm-0gE" secondAttribute="leading" id="Ao0-27-5KX"/>
                             <constraint firstItem="5Ne-cm-0gE" firstAttribute="trailing" secondItem="YEh-pe-yDu" secondAttribute="trailing" id="BCd-RC-eEq"/>
                             <constraint firstItem="Lyg-f8-c8l" firstAttribute="leading" secondItem="5Ne-cm-0gE" secondAttribute="leading" id="JYU-F5-XaH"/>
+                            <constraint firstItem="9H3-d1-mZa" firstAttribute="leading" secondItem="5Ne-cm-0gE" secondAttribute="leading" constant="8" id="OqK-Zw-MqV"/>
                             <constraint firstItem="5Ne-cm-0gE" firstAttribute="bottom" secondItem="YEh-pe-yDu" secondAttribute="bottom" id="PGj-HV-Wwe"/>
                             <constraint firstItem="5Ne-cm-0gE" firstAttribute="trailing" secondItem="yx8-NC-ZAs" secondAttribute="trailing" constant="6" id="WNL-I3-EAA"/>
                             <constraint firstItem="Lyg-f8-c8l" firstAttribute="top" secondItem="slk-II-s8C" secondAttribute="bottom" id="XWG-1b-5ps"/>
@@ -410,7 +421,9 @@
                         <outlet property="chatLabel" destination="ghZ-mi-4lr" id="2GF-0q-o44"/>
                         <outlet property="menuBtn" destination="aQz-eN-qbH" id="Oos-In-i0m"/>
                         <outlet property="messageTxtBox" destination="YEh-pe-yDu" id="GJe-yC-peQ"/>
+                        <outlet property="sendBtn" destination="yx8-NC-ZAs" id="mkW-Jd-CSI"/>
                         <outlet property="tableView" destination="Lyg-f8-c8l" id="xUQ-PN-flz"/>
+                        <outlet property="typingUsersLbl" destination="9H3-d1-mZa" id="pF8-ul-deC"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ese-5O-CRj" userLabel="First Responder" sceneMemberID="firstResponder"/>
