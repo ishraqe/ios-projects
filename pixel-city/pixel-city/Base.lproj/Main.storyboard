@@ -50,7 +50,7 @@
                                 </connections>
                             </button>
                             <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="LiV-Gw-Iav">
-                                <rect key="frame" x="0.0" y="667" width="375" height="12"/>
+                                <rect key="frame" x="0.0" y="657" width="375" height="12"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             </view>
                         </subviews>
