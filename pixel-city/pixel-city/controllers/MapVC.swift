@@ -38,11 +38,25 @@ extension MapVC: MKMapViewDelegate {
         mapView.setRegion(coordinateRegion, animated: true)
     }
     @objc func dropPin(sender: UITapGestureRecognizer) {
+        removePin() 
         let touchPoint = sender.location(in: mapView)
-        print("pin was dropped", touchPoint)
+        let touchCoordinate = mapView.convert(touchPoint, toCoordinateFrom: mapView)
+        
+        let annotation = DropablePin(coordinate: touchCoordinate, identifier: "dropablePin")
+        mapView.addAnnotation(annotation)
+        
+        let coordinateRegion = MKCoordinateRegion (center: touchCoordinate, latitudinalMeters: regionRadius * 2.0, longitudinalMeters: regionRadius * 2.0)
+        mapView.setRegion(coordinateRegion, animated: true)
     }
-    
+    func removePin() {
+        for annotation in mapView.annotations {
+            mapView.removeAnnotation(annotation)
+        }
+    }
 }
+
+
+
 extension MapVC: CLLocationManagerDelegate {
     func configureLocationService() {
         if authorizationStatus == .notDetermined {
