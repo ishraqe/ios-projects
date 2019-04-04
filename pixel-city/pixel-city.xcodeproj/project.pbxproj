@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		01563E3A225681D700239830 /* imageCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01563E39225681D700239830 /* imageCell.swift */; };
+		01563E3C22568C8000239830 /* constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01563E3B22568C7F00239830 /* constants.swift */; };
 		0168674C2254BEF200D5C576 /* DropablePin.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0168674B2254BEF200D5C576 /* DropablePin.swift */; };
 		0173E6B32253430000A2AA5C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0173E6B22253430000A2AA5C /* AppDelegate.swift */; };
 		0173E6B52253430000A2AA5C /* MapVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0173E6B42253430000A2AA5C /* MapVC.swift */; };
@@ -17,6 +19,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		01563E39225681D700239830 /* imageCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = imageCell.swift; sourceTree = "<group>"; };
+		01563E3B22568C7F00239830 /* constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = constants.swift; sourceTree = "<group>"; };
 		0168674B2254BEF200D5C576 /* DropablePin.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DropablePin.swift; sourceTree = "<group>"; };
 		0173E6AF2253430000A2AA5C /* pixel-city.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "pixel-city.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		0173E6B22253430000A2AA5C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -89,6 +93,7 @@
 			isa = PBXGroup;
 			children = (
 				0168674B2254BEF200D5C576 /* DropablePin.swift */,
+				01563E39225681D700239830 /* imageCell.swift */,
 			);
 			path = view;
 			sourceTree = "<group>";
@@ -110,6 +115,7 @@
 		0173E6C82253434B00A2AA5C /* utilities */ = {
 			isa = PBXGroup;
 			children = (
+				01563E3B22568C7F00239830 /* constants.swift */,
 			);
 			path = utilities;
 			sourceTree = "<group>";
@@ -246,7 +252,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				0173E6B52253430000A2AA5C /* MapVC.swift in Sources */,
+				01563E3A225681D700239830 /* imageCell.swift in Sources */,
 				0168674C2254BEF200D5C576 /* DropablePin.swift in Sources */,
+				01563E3C22568C8000239830 /* constants.swift in Sources */,
 				0173E6B32253430000A2AA5C /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
