@@ -39,7 +39,7 @@
                                 </constraints>
                             </view>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Z2G-At-tug">
-                                <rect key="frame" x="313" y="605" width="50" height="50"/>
+                                <rect key="frame" x="313" y="597" width="50" height="50"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="50" id="Y9r-e4-BAy"/>
                                     <constraint firstAttribute="width" constant="50" id="juy-do-hZa"/>
@@ -49,31 +49,35 @@
                                     <action selector="centeeMapBtnWasPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="1EH-lp-GeB"/>
                                 </connections>
                             </button>
-                            <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="LiV-Gw-Iav">
-                                <rect key="frame" x="0.0" y="657" width="375" height="12"/>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="LiV-Gw-Iav">
+                                <rect key="frame" x="0.0" y="666" width="375" height="1"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="1" id="reU-61-jcg"/>
+                                </constraints>
                             </view>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="hrW-QJ-0Vc" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="2lZ-Lu-IXS"/>
-                            <constraint firstItem="LiV-Gw-Iav" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="7il-Ht-kv3"/>
-                            <constraint firstItem="LiV-Gw-Iav" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="9rV-3F-tSR"/>
                             <constraint firstItem="hrW-QJ-0Vc" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="DAb-Ka-FHo"/>
                             <constraint firstItem="gUV-Hg-Rpf" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="FiR-hs-XBj"/>
-                            <constraint firstItem="LiV-Gw-Iav" firstAttribute="top" secondItem="Z2G-At-tug" secondAttribute="bottom" id="InO-9K-Nl9"/>
-                            <constraint firstItem="LiV-Gw-Iav" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="XtO-dA-Wk0"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="Z2G-At-tug" secondAttribute="bottom" constant="12" id="j9f-h9-7d6"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Z2G-At-tug" secondAttribute="trailing" constant="12" id="n1k-p4-dX3"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="hrW-QJ-0Vc" secondAttribute="bottom" id="nVr-f2-caf"/>
+                            <constraint firstItem="LiV-Gw-Iav" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="T1c-0i-K6n"/>
+                            <constraint firstItem="LiV-Gw-Iav" firstAttribute="top" secondItem="Z2G-At-tug" secondAttribute="bottom" constant="19" id="odB-vD-dwn"/>
+                            <constraint firstItem="LiV-Gw-Iav" firstAttribute="trailing" secondItem="Z2G-At-tug" secondAttribute="trailing" constant="12" id="qRV-MJ-Y9Y"/>
                             <constraint firstItem="gUV-Hg-Rpf" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="rNt-oY-U6p"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="hrW-QJ-0Vc" secondAttribute="trailing" id="rp8-SJ-O5F"/>
+                            <constraint firstItem="LiV-Gw-Iav" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="tpw-aN-jVX"/>
+                            <constraint firstItem="LiV-Gw-Iav" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="v6v-h5-n5f"/>
+                            <constraint firstItem="hrW-QJ-0Vc" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="vvD-pj-2If"/>
                             <constraint firstItem="gUV-Hg-Rpf" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="wMK-69-511"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <connections>
                         <outlet property="mapView" destination="hrW-QJ-0Vc" id="Ier-Ds-1Ln"/>
+                        <outlet property="pullUpView" destination="LiV-Gw-Iav" id="XbK-qq-fMS"/>
+                        <outlet property="pullUpViewHeightConstraints" destination="reU-61-jcg" id="yKC-0t-1Bh"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
