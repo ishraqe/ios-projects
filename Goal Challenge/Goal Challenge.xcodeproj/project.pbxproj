@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		015BDE6A225A109C0059D261 /* GoalType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 015BDE69225A109C0059D261 /* GoalType.swift */; };
+		015BDE6C225A16E80059D261 /* CreateGoalVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 015BDE6B225A16E80059D261 /* CreateGoalVC.swift */; };
+		015BDE6E225A216F0059D261 /* UIViewControllerExt.swift in Sources */ = {isa = PBXBuildFile; fileRef = 015BDE6D225A216F0059D261 /* UIViewControllerExt.swift */; };
 		01FDA62422592C46001939CB /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01FDA62322592C46001939CB /* AppDelegate.swift */; };
 		01FDA62622592C46001939CB /* GoalVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01FDA62522592C46001939CB /* GoalVC.swift */; };
 		01FDA62922592C46001939CB /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 01FDA62722592C46001939CB /* Main.storyboard */; };
@@ -17,6 +20,9 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		015BDE69225A109C0059D261 /* GoalType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoalType.swift; sourceTree = "<group>"; };
+		015BDE6B225A16E80059D261 /* CreateGoalVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateGoalVC.swift; sourceTree = "<group>"; };
+		015BDE6D225A216F0059D261 /* UIViewControllerExt.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewControllerExt.swift; sourceTree = "<group>"; };
 		01FDA62022592C46001939CB /* Goal Challenge.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Goal Challenge.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		01FDA62322592C46001939CB /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		01FDA62522592C46001939CB /* GoalVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoalVC.swift; sourceTree = "<group>"; };
@@ -76,6 +82,7 @@
 			isa = PBXGroup;
 			children = (
 				01FDA62522592C46001939CB /* GoalVC.swift */,
+				015BDE6B225A16E80059D261 /* CreateGoalVC.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -91,6 +98,7 @@
 		01FDA63A22592CAA001939CB /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
+				015BDE6D225A216F0059D261 /* UIViewControllerExt.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -98,6 +106,7 @@
 		01FDA63B22592CB1001939CB /* Enums */ = {
 			isa = PBXGroup;
 			children = (
+				015BDE69225A109C0059D261 /* GoalType.swift */,
 			);
 			path = Enums;
 			sourceTree = "<group>";
@@ -174,8 +183,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				01FDA63D22593841001939CB /* GoalCell.swift in Sources */,
+				015BDE6C225A16E80059D261 /* CreateGoalVC.swift in Sources */,
+				015BDE6A225A109C0059D261 /* GoalType.swift in Sources */,
 				01FDA62622592C46001939CB /* GoalVC.swift in Sources */,
 				01FDA62422592C46001939CB /* AppDelegate.swift in Sources */,
+				015BDE6E225A216F0059D261 /* UIViewControllerExt.swift in Sources */,
 				01FDA62C22592C46001939CB /* Goal_Challenge.xcdatamodeld in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
