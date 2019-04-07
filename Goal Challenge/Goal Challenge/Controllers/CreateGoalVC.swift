@@ -2,11 +2,13 @@
 import UIKit
 
 class CreateGoalVC: UIViewController {
-    
+
     @IBOutlet weak var goalDesc: UITextView!
-    @IBOutlet weak var shortTermBtn: UIButton!
     
     @IBOutlet weak var longTermBtn: UIButton!
+    
+    @IBOutlet weak var shortTermBtn: UIButton!
+   
     @IBOutlet weak var nextBtn: UIButton!
     
     var goalType: GoalType = .shortTerm
