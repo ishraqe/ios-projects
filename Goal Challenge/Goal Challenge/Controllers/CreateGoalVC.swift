@@ -38,7 +38,7 @@ class CreateGoalVC: UIViewController {
         if goalDesc.text != "" && goalDesc.text != "Whats your goal?" {
             guard let finishGoalVC = storyboard?.instantiateViewController(withIdentifier: "finishGoalVC") as? FinishGoalVC else {return}
             finishGoalVC.initData(goalDesc: goalDesc.text, goalType: goalType)
-            presentDetail(finishGoalVC)
+            presentingViewController?.presentSecondaryDetail(finishGoalVC)
         }
     }
     @IBAction func backBtnWasPressed(_ sender: Any) {
