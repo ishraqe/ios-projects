@@ -64,12 +64,37 @@ extension GoalVC: UITableViewDelegate, UITableViewDataSource {
             self.fetchObjectsFromCoreData()
             tableView.deleteRows(at: [indexPath], with: .automatic)
         }
+        let addAction = UITableViewRowAction(style: .destructive, title: "ADD 1") { (rowAction, indexPath) in
+           self.setProgress(atIndexPath: indexPath)
+           tableView.reloadRows(at: [indexPath], with: .automatic)
+        }
         deleteAction.backgroundColor = #colorLiteral(red: 1, green: 0.1491314173, blue: 0, alpha: 1)
-        return [deleteAction]
+        addAction.backgroundColor = #colorLiteral(red: 0.4922404289, green: 0.7722371817, blue: 0.4631441236, alpha: 1)
+        return [deleteAction, addAction]
     }
 }
 
 extension GoalVC {
+    
+    func setProgress(atIndexPath indexPath: IndexPath){
+         guard let managedContext = appDeleagte?.persistentContainer.viewContext else {return}
+        
+        let choosenGoal =  goals[indexPath.row]
+        if choosenGoal.goalProgress < choosenGoal.goalCompletionVal {
+                choosenGoal.goalProgress = choosenGoal.goalProgress + 1
+        }else{
+            return
+        }
+        
+        do {
+            try managedContext.save()
+            print("Successfully removed content")
+            
+        } catch  {
+            debugPrint("Could not fetch: \(error.localizedDescription)")
+            
+        }
+    }
     
     func removeData(atIndexPath indexPath: IndexPath){
         guard let managedContext = appDeleagte?.persistentContainer.viewContext else {return}
