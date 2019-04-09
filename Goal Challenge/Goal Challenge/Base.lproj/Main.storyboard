@@ -140,10 +140,10 @@
                                                     <color key="textColor" red="0.42745098040000001" green="0.73725490199999999" blue="0.38823529410000002" alpha="1" colorSpace="calibratedRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="RJP-Kk-H11">
-                                                    <rect key="frame" x="0.0" y="0.0" width="375" height="69.5"/>
+                                                <view contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="RJP-Kk-H11">
+                                                    <rect key="frame" x="0.0" y="-1" width="375" height="69.5"/>
                                                     <subviews>
-                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Goal Complete" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cnG-Iw-ENj">
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Goal Complete" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cnG-Iw-ENj">
                                                             <rect key="frame" x="122.5" y="23" width="130.5" height="23.5"/>
                                                             <fontDescription key="fontDescription" name="AvenirNext-Heavy" family="Avenir Next" pointSize="17"/>
                                                             <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -158,15 +158,11 @@
                                                 </view>
                                             </subviews>
                                             <constraints>
-                                                <constraint firstItem="RJP-Kk-H11" firstAttribute="leading" secondItem="Cu9-Ks-Hkn" secondAttribute="leading" id="1p2-28-1gX"/>
-                                                <constraint firstAttribute="trailing" secondItem="RJP-Kk-H11" secondAttribute="trailing" id="8WE-b0-2zu"/>
-                                                <constraint firstItem="RJP-Kk-H11" firstAttribute="top" secondItem="Cu9-Ks-Hkn" secondAttribute="top" id="942-YV-IK9"/>
                                                 <constraint firstItem="gdK-fA-a9H" firstAttribute="top" secondItem="Cu9-Ks-Hkn" secondAttribute="topMargin" id="OR6-by-0xC"/>
                                                 <constraint firstItem="Lf6-Ge-yGO" firstAttribute="leading" secondItem="gdK-fA-a9H" secondAttribute="trailing" constant="10" id="PWv-Xc-O2g"/>
                                                 <constraint firstItem="Lf6-Ge-yGO" firstAttribute="top" secondItem="Cu9-Ks-Hkn" secondAttribute="topMargin" constant="8" id="TDr-dH-qoF"/>
                                                 <constraint firstItem="gdK-fA-a9H" firstAttribute="leading" secondItem="Cu9-Ks-Hkn" secondAttribute="leadingMargin" constant="10" id="V5i-c0-Gtf"/>
                                                 <constraint firstAttribute="bottomMargin" secondItem="gdK-fA-a9H" secondAttribute="bottom" id="YRB-af-dhE"/>
-                                                <constraint firstAttribute="bottom" secondItem="RJP-Kk-H11" secondAttribute="bottom" id="qZy-C3-bLF"/>
                                                 <constraint firstAttribute="trailingMargin" secondItem="Lf6-Ge-yGO" secondAttribute="trailing" constant="10" id="xTq-c9-e0f"/>
                                                 <constraint firstAttribute="bottomMargin" secondItem="Lf6-Ge-yGO" secondAttribute="bottom" constant="8" id="xqj-R0-9TH"/>
                                             </constraints>
