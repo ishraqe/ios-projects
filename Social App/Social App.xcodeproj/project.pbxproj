@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		01B739E0225E738B00759D12 /* insertTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01B739DF225E738B00759D12 /* insertTextField.swift */; };
+		01B739E2225E7C7100759D12 /* ShadowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01B739E1225E7C7100759D12 /* ShadowView.swift */; };
+		01B739E4225E82B000759D12 /* AuthService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01B739E3225E82B000759D12 /* AuthService.swift */; };
 		01CC82BB225CAFFC0007C608 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01CC82BA225CAFFC0007C608 /* AppDelegate.swift */; };
 		01CC82BD225CAFFC0007C608 /* FirstViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01CC82BC225CAFFC0007C608 /* FirstViewController.swift */; };
 		01CC82BF225CAFFC0007C608 /* SecondViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01CC82BE225CAFFC0007C608 /* SecondViewController.swift */; };
@@ -19,6 +22,9 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		01B739DF225E738B00759D12 /* insertTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = insertTextField.swift; sourceTree = "<group>"; };
+		01B739E1225E7C7100759D12 /* ShadowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShadowView.swift; sourceTree = "<group>"; };
+		01B739E3225E82B000759D12 /* AuthService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthService.swift; sourceTree = "<group>"; };
 		01CC82B7225CAFFC0007C608 /* Social App.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Social App.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		01CC82BA225CAFFC0007C608 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		01CC82BC225CAFFC0007C608 /* FirstViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstViewController.swift; sourceTree = "<group>"; };
@@ -93,6 +99,8 @@
 		01CC82CF225CB00E0007C608 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				01B739DF225E738B00759D12 /* insertTextField.swift */,
+				01B739E1225E7C7100759D12 /* ShadowView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -108,6 +116,7 @@
 			isa = PBXGroup;
 			children = (
 				01CC82D4225CB2A20007C608 /* DataService.swift */,
+				01B739E3225E82B000759D12 /* AuthService.swift */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -248,10 +257,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				01B739E2225E7C7100759D12 /* ShadowView.swift in Sources */,
 				01CC82BF225CAFFC0007C608 /* SecondViewController.swift in Sources */,
+				01B739E0225E738B00759D12 /* insertTextField.swift in Sources */,
 				01CC82BB225CAFFC0007C608 /* AppDelegate.swift in Sources */,
 				01CC82BD225CAFFC0007C608 /* FirstViewController.swift in Sources */,
 				01CC82D5225CB2A20007C608 /* DataService.swift in Sources */,
+				01B739E4225E82B000759D12 /* AuthService.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

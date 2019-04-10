@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="49e-Tb-3d3">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="ADi-VP-Kni">
     <device id="retina6_1" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -104,7 +104,7 @@
                                 <color key="textColor" red="0.5607843137254902" green="0.81176470588235294" blue="0.30588235294117649" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="IOH-VS-WRu">
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="IOH-VS-WRu" customClass="ShadowView" customModule="Social_App" customModuleProvider="target">
                                 <rect key="frame" x="20" y="285.5" width="374" height="325"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="Fuz-Qm-sua">
@@ -153,6 +153,7 @@
                                 <color key="backgroundColor" red="0.25490196078431371" green="0.27058823529411763" blue="0.31372549019607843" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
                                     <constraint firstItem="TtG-cB-faq" firstAttribute="top" secondItem="Fuz-Qm-sua" secondAttribute="bottom" id="6UM-jN-RiR"/>
+                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="325" id="DGk-tl-HOQ"/>
                                     <constraint firstItem="TtG-cB-faq" firstAttribute="leading" secondItem="IOH-VS-WRu" secondAttribute="leading" constant="20" id="NOA-ab-DMl"/>
                                     <constraint firstAttribute="bottom" secondItem="TtG-cB-faq" secondAttribute="bottom" constant="20" id="RXY-Gr-SdR"/>
                                     <constraint firstItem="Fuz-Qm-sua" firstAttribute="top" secondItem="IOH-VS-WRu" secondAttribute="top" constant="20" id="Vni-9R-ap3"/>
@@ -169,8 +170,10 @@
                             <constraint firstItem="xdK-iP-nZK" firstAttribute="top" secondItem="4OC-an-hJf" secondAttribute="top" constant="30" id="FVv-a2-3yP"/>
                             <constraint firstItem="Ykb-sB-1Bq" firstAttribute="trailing" secondItem="4OC-an-hJf" secondAttribute="trailing" id="Igy-jr-89y"/>
                             <constraint firstItem="IOH-VS-WRu" firstAttribute="centerX" secondItem="pLT-3z-iP0" secondAttribute="centerX" id="O1D-rt-7Z5"/>
+                            <constraint firstItem="IOH-VS-WRu" firstAttribute="leading" secondItem="4OC-an-hJf" secondAttribute="leading" constant="20" id="OON-pw-Jj6"/>
                             <constraint firstItem="Ykb-sB-1Bq" firstAttribute="top" secondItem="4OC-an-hJf" secondAttribute="top" id="bFR-vn-9je"/>
                             <constraint firstItem="xdK-iP-nZK" firstAttribute="leading" secondItem="4OC-an-hJf" secondAttribute="leading" constant="45" id="dYx-iR-5P0"/>
+                            <constraint firstItem="4OC-an-hJf" firstAttribute="trailing" secondItem="IOH-VS-WRu" secondAttribute="trailing" constant="20" id="nDL-DW-b5w"/>
                             <constraint firstItem="4OC-an-hJf" firstAttribute="trailing" secondItem="xdK-iP-nZK" secondAttribute="trailing" constant="45" id="nEO-Y9-qcO"/>
                             <constraint firstItem="Ykb-sB-1Bq" firstAttribute="leading" secondItem="4OC-an-hJf" secondAttribute="leading" id="x5K-Sm-fDb"/>
                             <constraint firstItem="IOH-VS-WRu" firstAttribute="centerY" secondItem="pLT-3z-iP0" secondAttribute="centerY" id="xv8-Qk-YSg"/>
@@ -207,7 +210,7 @@
                                         <color key="textColor" red="0.015686274510000001" green="0.6705882353" blue="0.7725490196" alpha="1" colorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="line" placeholder="Email" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="pNx-J7-buj">
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="line" placeholder="Email" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="pNx-J7-buj" customClass="insertTextField" customModule="Social_App" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="43.5" width="374" height="50"/>
                                         <color key="backgroundColor" red="0.16078431369999999" green="0.16862745100000001" blue="0.20392156859999999" alpha="1" colorSpace="calibratedRGB"/>
                                         <constraints>
@@ -215,10 +218,10 @@
                                             <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="50" id="iyE-OV-o6q"/>
                                         </constraints>
                                         <color key="textColor" red="0.42745098040000001" green="0.73725490199999999" blue="0.38823529410000002" alpha="1" colorSpace="calibratedRGB"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <fontDescription key="fontDescription" name="Menlo-Regular" family="Menlo" pointSize="17"/>
                                         <textInputTraits key="textInputTraits"/>
                                     </textField>
-                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="line" placeholder="Email" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="fPI-ub-pSR">
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="line" placeholder="Password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="fPI-ub-pSR" customClass="insertTextField" customModule="Social_App" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="113.5" width="374" height="50"/>
                                         <color key="backgroundColor" red="0.16078431369999999" green="0.16862745100000001" blue="0.20392156859999999" alpha="1" colorSpace="calibratedRGB"/>
                                         <constraints>
@@ -226,7 +229,7 @@
                                             <constraint firstAttribute="height" constant="50" id="naJ-h1-5Po"/>
                                         </constraints>
                                         <color key="textColor" red="0.42745098040000001" green="0.73725490199999999" blue="0.38823529410000002" alpha="1" colorSpace="calibratedRGB"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <fontDescription key="fontDescription" name="Menlo-Regular" family="Menlo" pointSize="17"/>
                                         <textInputTraits key="textInputTraits"/>
                                     </textField>
                                 </subviews>
