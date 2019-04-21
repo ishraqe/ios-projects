@@ -1,0 +1,24 @@
+PODS:
+  - ParallaxHeader (2.0.0)
+  - SnapKit (4.0.1)
+  - ViewAnimator (2.2.2)
+
+DEPENDENCIES:
+  - ParallaxHeader (~> 2.0.0)
+  - SnapKit (~> 4.0.0)
+  - ViewAnimator
+
+SPEC REPOS:
+  https://github.com/cocoapods/specs.git:
+    - ParallaxHeader
+    - SnapKit
+    - ViewAnimator
+
+SPEC CHECKSUMS:
+  ParallaxHeader: fb6ee97915626454f3c029a97b424f79a777c642
+  SnapKit: 0de968a9fec17499afa29683b05d0c775b6d1c29
+  ViewAnimator: 6eaa112663b6a2d9e6b2573df65b416dd051cbe4
+
+PODFILE CHECKSUM: 9632fb20631130dd9203f9ad32ea0e464892bfe2
+
+COCOAPODS: 1.5.2
