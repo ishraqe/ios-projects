@@ -23,18 +23,23 @@ class DetailVC: UIViewController, UIScrollViewDelegate {
         imageView.image = UIImage(named: "list-1")
         imageView.contentMode = .scaleAspectFill
         imageView.clipsToBounds = true
+         imageView.hero.id = "1"
+        
+        let label = UILabel(frame: CGRect(x: self.imageView.frame.origin.x, y: self.imageView.frame.origin.y, width: self.imageView.frame.size.width, height: 50))
+        
+//        label.addConstraints([NSLayoutConstraint])
+//        topLeftLabel.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 10).isActive = true
+       
         
         
-        let label = UILabel(frame: CGRect(x: self.imageView.frame.origin.x, y: self.view.frame.origin.y, width: self.imageView.frame.size.width, height: 50))
         label.textAlignment = .center
-        label.text = "Hello this my label"
+        label.text = "Crotia"
         
         //To set the color
-        label.backgroundColor = UIColor.white
-        label.textColor = UIColor.black
+        label.textColor = UIColor.white
         
         //To set the font Dynamic
-        label.font = UIFont(name: "Helvetica-Regular", size: 20.0)
+        label.font = UIFont(name: "Aveniar Next", size: 20.0)
         
         //To set the system font
         label.font = UIFont.systemFont(ofSize: 20.0)
@@ -46,7 +51,9 @@ class DetailVC: UIViewController, UIScrollViewDelegate {
         
         label.sizeToFit()
         self.imageView.addSubview(label)
-        
+        label.bottomAnchor.constraint(equalTo: imageView.bottomAnchor, constant: 16).isActive = true
+        label.leftAnchor.constraint(equalTo: imageView.leftAnchor, constant: 16).isActive = true
+       
         
         
         infoText.textColor = .white

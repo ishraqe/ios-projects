@@ -1,6 +1,6 @@
 
 import UIKit
-
+import Hero
 
 class TripsCell: UITableViewCell {
 
@@ -35,5 +35,7 @@ class TripsCell: UITableViewCell {
         self.weatherName.text = "Summer 2016"
         self.durationLbl.text = "8 days"
         self.userImg.image = UIImage(named: "user")
+        
+        self.bgImg.hero.id = "1"
     }
 }

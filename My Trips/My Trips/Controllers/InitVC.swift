@@ -17,7 +17,7 @@ class InitVC: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        Timer.scheduledTimer(timeInterval: 3, target: self, selector: #selector(changeVC), userInfo: .none, repeats: false)
+        Timer.scheduledTimer(timeInterval: 2, target: self, selector: #selector(changeVC), userInfo: .none, repeats: false)
     }
     
     

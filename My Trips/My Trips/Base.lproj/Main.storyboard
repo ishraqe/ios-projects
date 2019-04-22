@@ -189,6 +189,9 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="WCu-GP-S1K"/>
                     </view>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="boolean" keyPath="isHeroEnabled" value="YES"/>
+                    </userDefinedRuntimeAttributes>
                     <connections>
                         <outlet property="tableView" destination="0Tm-2i-ywG" id="JLG-sJ-EOD"/>
                     </connections>
@@ -207,6 +210,9 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="Tm5-uG-3Yx"/>
                     </view>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="boolean" keyPath="isHeroEnabled" value="YES"/>
+                    </userDefinedRuntimeAttributes>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="tEY-bM-FcN" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
