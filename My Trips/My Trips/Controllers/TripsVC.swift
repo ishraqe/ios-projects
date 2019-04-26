@@ -14,12 +14,6 @@ class TripsVC: UIViewController {
         // Do any additional setup after loading the view.
 //        Timer.scheduledTimer(timeInterval: 6, target: self, selector: #selector(changeVC), userInfo: .none, repeats: false)
     }
-    
-    @objc func changeVC () {
-        let detailsVC = storyboard?.instantiateViewController(withIdentifier: "DetailVC")
-        
-        self.present(detailsVC!, animated: true, completion: nil)
-    }
 }
 
 

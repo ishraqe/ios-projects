@@ -1,173 +1,132 @@
 import UIKit
 import SnapKit
 
-class DetailVC: UIViewController, UIScrollViewDelegate {
+class DetailVC: UIViewController {
     
-    private let scrollView = UIScrollView()
-    private let infoText = UILabel()
-    private let imageView = UIImageView()
-    private let textContainer = UIView()
+    
+    fileprivate let cellId = "cellId"
+    fileprivate let headerId = "headerId"
+    fileprivate let padding: CGFloat = 16
+    var headerView: HeaderView?
+    
     
     override var preferredStatusBarStyle: UIStatusBarStyle {
         return .lightContent
     }
     
+    let collectionView: UICollectionView = {
+      
+        let collection = UICollectionView(frame: CGRect(x: 0, y: 0, width: 150, height: 150), collectionViewLayout: StreachyHeader())
+        collection.translatesAutoresizingMaskIntoConstraints = false
+        collection.backgroundColor =  .gray
+        collection.isScrollEnabled = true
+        return collection
+    }()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        view.backgroundColor = .gray
-        
-        scrollView.contentInsetAdjustmentBehavior = .never
-        scrollView.delegate = self
-        
-        imageView.image = UIImage(named: "list-1")
-        imageView.contentMode = .scaleAspectFill
-        imageView.clipsToBounds = true
-         imageView.hero.id = "1"
-        
-        let label = UILabel(frame: CGRect(x: self.imageView.frame.origin.x, y: self.imageView.frame.origin.y, width: self.imageView.frame.size.width, height: 50))
-        
-//        label.addConstraints([NSLayoutConstraint])
-//        topLeftLabel.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 10).isActive = true
-       
-        
-        
-        label.textAlignment = .center
-        label.text = "Crotia"
-        
-        //To set the color
-        label.textColor = UIColor.white
-        
-        //To set the font Dynamic
-        label.font = UIFont(name: "Aveniar Next", size: 20.0)
-        
-        //To set the system font
-        label.font = UIFont.systemFont(ofSize: 20.0)
-        
-        //To display multiple lines
-        label.numberOfLines = 0
-        label.lineBreakMode = .byWordWrapping //Wrap the word of label
-        label.lineBreakMode = .byCharWrapping //Wrap the charactor of label
-        
-        label.sizeToFit()
-        self.imageView.addSubview(label)
-        label.bottomAnchor.constraint(equalTo: imageView.bottomAnchor, constant: 16).isActive = true
-        label.leftAnchor.constraint(equalTo: imageView.leftAnchor, constant: 16).isActive = true
-       
-        
-        
-        infoText.textColor = .white
-        infoText.numberOfLines = 0
-        let text =  """
-                    Lorem ipsum dolor sit amet, in alia adhuc aperiri nam. Movet scripta tractatos cu eum, sale commodo meliore ea eam, per commodo atomorum ea. Unum graeci iriure nec an, ea sit habeo movet electram. Id eius assum persius pro, id cum falli accusam. Has eu fierent partiendo, doming expetenda interesset cu mel, tempor possit vocent in nam. Iusto tollit ad duo, est at vidit vivendo liberavisse, vide munere nonumy sed ex.
-                            
-                    Quod possit expetendis id qui, consequat vituperata ad eam. Per cu elit latine vivendum. Ei sit nullam aliquam, an ferri epicuri quo. Ex vim tibique accumsan erroribus. In per libris verear adipiscing. Purto aliquid lobortis ea quo, ea utinam oportere qui.
-                    """
-        infoText.text = text + text + text
-        
-        let imageContainer = UIView()
-        imageContainer.backgroundColor = .darkGray
-        
-        textContainer.backgroundColor = .clear
-        
-        let textBacking = UIView()
-        textBacking.backgroundColor = #colorLiteral(red: 0.7450980544, green: 0.1235740449, blue: 0.2699040081, alpha: 1)
-        
-        view.addSubview(scrollView)
-        
-        scrollView.addSubview(imageContainer)
-        scrollView.addSubview(textBacking)
-        scrollView.addSubview(textContainer)
-        scrollView.addSubview(imageView)
-        
-        textContainer.addSubview(infoText)
-        
-        scrollView.snp.makeConstraints {
-            make in
-            
-            make.edges.equalTo(view)
-        }
-        
-        imageContainer.snp.makeConstraints {
-            make in
-            
-            make.top.equalTo(scrollView)
-            make.left.right.equalTo(view)
-            make.height.equalTo(imageContainer.snp.width).multipliedBy(0.7)
-        }
-        
-        imageView.snp.makeConstraints {
-            make in
-            
-            make.left.right.equalTo(imageContainer)
-            
-            //** Note the priorities
-            make.top.equalTo(view).priority(.high)
-            
-            //** We add a height constraint too
-            make.height.greaterThanOrEqualTo(imageContainer.snp.height).priority(.required)
-            
-            //** And keep the bottom constraint
-            make.bottom.equalTo(imageContainer.snp.bottom)
-        }
-        
-        textContainer.snp.makeConstraints {
-            make in
-            
-            make.top.equalTo(imageContainer.snp.bottom)
-            make.left.right.equalTo(view)
-            make.bottom.equalTo(scrollView)
-        }
-        
-        textBacking.snp.makeConstraints {
-            make in
-            
-            make.left.right.equalTo(view)
-            make.top.equalTo(textContainer)
-            make.bottom.equalTo(view)
-        }
-        
-        infoText.snp.makeConstraints {
-            make in
-            
-            make.edges.equalTo(textContainer).inset(14)
-        }
+        view.addSubview(collectionView)
+        setupCollectionView()
     }
     
-    override func viewDidLayoutSubviews() {
-        super.viewDidLayoutSubviews()
-        
-        scrollView.scrollIndicatorInsets = view.safeAreaInsets
-        scrollView.contentInset = UIEdgeInsets(top: 0, left: 0, bottom: view.safeAreaInsets.bottom, right: 0)
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        headerView?.backBtn.addTarget(self, action: #selector(DetailVC.backBtnPressed), for: .touchUpInside)
+    }
+    override func viewWillDisappear(_ animated: Bool) {
+        super.viewWillDisappear(animated)
+        headerView?.animator.stopAnimation(true)
     }
     
-    //MARK: - Scroll View Delegate
+    @objc func backBtnPressed () {
+       self.dismiss(animated: true, completion: nil)
+    }
     
-    private var previousStatusBarHidden = false
+    @objc func editBtnPressed(){
+        
+    }
+    func setupCollectionView() {
+        
+            collectionView.translatesAutoresizingMaskIntoConstraints = false
+         collectionView.topAnchor.constraint(equalTo: view.topAnchor, constant: 0).isActive = true
+         collectionView.bottomAnchor.constraint(equalTo: view.bottomAnchor, constant: 0).isActive = true
+         collectionView.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 0).isActive = true
+         collectionView.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: 0).isActive = true
+        
+        
+        collectionView.backgroundColor = .white
+        collectionView.contentInsetAdjustmentBehavior = .never
+        collectionView.dataSource = self
+        collectionView.delegate = self
+        
+      
+//         collectionView.collectionViewLayout = StreachyHeader()
+        // header and cell
+        collectionView.register(DetailsCell.self, forCellWithReuseIdentifier: cellId)
+        collectionView.register(HeaderView.self, forSupplementaryViewOfKind: UICollectionView.elementKindSectionHeader, withReuseIdentifier: headerId)
+    }
+    
+}
+
+
+extension DetailVC: UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
     
     func scrollViewDidScroll(_ scrollView: UIScrollView) {
-        if previousStatusBarHidden != shouldHideStatusBar {
-            
-            UIView.animate(withDuration: 0.2, animations: {
-                self.setNeedsStatusBarAppearanceUpdate()
-            })
-            
-            previousStatusBarHidden = shouldHideStatusBar
+        let contentofsetY =  scrollView.contentOffset.y
+        if contentofsetY > 0 {
+            headerView?.animator.fractionComplete = 0
+            return
         }
+        headerView?.animator.fractionComplete = abs(contentofsetY) / 100
+        
+        
     }
     
-    //MARK: - Status Bar Appearance
     
-    override var preferredStatusBarUpdateAnimation: UIStatusBarAnimation {
-        return .slide
+    
+    // Header
+    func collectionView(_ collectionView: UICollectionView, viewForSupplementaryElementOfKind kind: String, at indexPath: IndexPath) -> UICollectionReusableView {
+        headerView = collectionView.dequeueReusableSupplementaryView(ofKind: kind, withReuseIdentifier: headerId, for: indexPath) as? HeaderView
+        return headerView!
     }
     
-    override var prefersStatusBarHidden: Bool {
-        return shouldHideStatusBar
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, referenceSizeForHeaderInSection section: Int) -> CGSize {
+        return .init(width: view.frame.width, height: (view.frame.height / 2) + 100  )
     }
     
-    private var shouldHideStatusBar: Bool {
-        let frame = textContainer.convert(textContainer.bounds, to: nil)
-        return frame.minY < view.safeAreaInsets.top
+    
+    // Cell
+    func numberOfSections(in collectionView: UICollectionView) -> Int {
+        return 1
     }
+    
+    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+        return 1
+    }
+    
+    
+    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+        
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: cellId, for: indexPath) as! DetailsCell
+        
+        cell.backgroundColor = .white
+        cell.layer.cornerRadius = 5
+        
+//        cell.bgImage.image =  UIImage(named: "night")
+
+        return cell
+        
+    }
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
+        
+        return .init(width: view.frame.width, height: 600)
+    }
+    
+    
+    // insets or padding
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, insetForSectionAt section: Int) -> UIEdgeInsets{
+        return UIEdgeInsets(top: 0,left: 0 ,bottom: 0,right: 0)
+        
+    }
+    
 }
