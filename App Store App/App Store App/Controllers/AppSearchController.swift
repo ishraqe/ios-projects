@@ -10,11 +10,15 @@ class AppSearchController: UICollectionViewController, UICollectionViewDelegateF
         super.viewDidLoad()
         setupCollectionView()
         DataService.instance.fetchItunesData { (isComplete) in
-            print("complete", isComplete)
+            if isComplete {
+                self.collectionView.reloadData()
+            }
         }
+
     }
     override init(collectionViewLayout layout: UICollectionViewLayout) {
         super.init(collectionViewLayout: UICollectionViewFlowLayout())
+        
     }
     required init?(coder aDecoder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
@@ -31,17 +35,17 @@ class AppSearchController: UICollectionViewController, UICollectionViewDelegateF
     }
     
     override func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return 5
+        return DataService.instance.searchResults.count
     }
     
     override func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: searchCellId, for: indexPath) as! AppSearchCell
         
-        cell.nameLabel.text = "my aoo"
-       
+            let result = DataService.instance.searchResults[indexPath.row]
+            cell.configureCell(result: result)
         
-        return cell
+            return cell
         
     }
     

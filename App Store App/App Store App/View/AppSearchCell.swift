@@ -41,7 +41,7 @@ class AppSearchCell: UICollectionViewCell {
         return button
     }()
     
-    lazy var screenshotImage1 = self.createScreenshotImageView()
+     lazy var screenshotImage1 = self.createScreenshotImageView()
      lazy var screenshotImage2 = self.createScreenshotImageView()
      lazy var screenshotImage3 = self.createScreenshotImageView()
     
@@ -72,21 +72,19 @@ class AppSearchCell: UICollectionViewCell {
         
        let overAllStackView = VerticalStackView(arrangedSubViews: [infoTopStackView,screenshotStackView], spacing:  16)
         
-        
         addSubview(overAllStackView)
-        
         overAllStackView.fillSuperview(padding: .init(top: 16, left: 16, bottom: 16, right: 16))
-        
     }
-    
-    
     override init(frame: CGRect) {
         super.init(frame: frame)
-        
         backgroundColor = .white
         setupViews()
-       
-        
+    }
+    
+    func configureCell(result: Result){
+        self.nameLabel.text = result.trackName
+        self.categoryLabel.text = result.primaryGenreName
+        self.ratingsLabel.text = "Ratings: \(result.averageuserRatings ?? 0)"
     }
     
     required init?(coder aDecoder: NSCoder) {
