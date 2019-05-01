@@ -7,10 +7,14 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0129C13B227A30B300D8091A /* BaseCollectionVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0129C13A227A30B200D8091A /* BaseCollectionVC.swift */; };
+		0129C13D227A316300D8091A /* AppCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0129C13C227A316300D8091A /* AppCollectionViewController.swift */; };
+		0129C140227A344A00D8091A /* AppsGroupCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0129C13F227A344A00D8091A /* AppsGroupCell.swift */; };
+		0129C142227A34D700D8091A /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0129C141227A34D700D8091A /* ViewController.swift */; };
+		0129C146227A385500D8091A /* HorizontalController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0129C145227A385500D8091A /* HorizontalController.swift */; };
 		014DBA2C227715580010FA97 /* DataService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 014DBA2B227715580010FA97 /* DataService.swift */; };
 		014DBA2F2277173B0010FA97 /* SearchResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = 014DBA2E2277173B0010FA97 /* SearchResult.swift */; };
 		015927E522758F1E0083EB23 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 015927E422758F1E0083EB23 /* AppDelegate.swift */; };
-		015927E722758F1E0083EB23 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 015927E622758F1E0083EB23 /* ViewController.swift */; };
 		015927EA22758F1E0083EB23 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 015927E822758F1E0083EB23 /* Main.storyboard */; };
 		015927EC22758F200083EB23 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 015927EB22758F200083EB23 /* Assets.xcassets */; };
 		015927EF22758F200083EB23 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 015927ED22758F200083EB23 /* LaunchScreen.storyboard */; };
@@ -24,11 +28,15 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		0129C13A227A30B200D8091A /* BaseCollectionVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseCollectionVC.swift; sourceTree = "<group>"; };
+		0129C13C227A316300D8091A /* AppCollectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppCollectionViewController.swift; sourceTree = "<group>"; };
+		0129C13F227A344A00D8091A /* AppsGroupCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppsGroupCell.swift; sourceTree = "<group>"; };
+		0129C141227A34D700D8091A /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		0129C145227A385500D8091A /* HorizontalController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HorizontalController.swift; sourceTree = "<group>"; };
 		014DBA2B227715580010FA97 /* DataService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataService.swift; sourceTree = "<group>"; };
 		014DBA2E2277173B0010FA97 /* SearchResult.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchResult.swift; sourceTree = "<group>"; };
 		015927E122758F1E0083EB23 /* App Store App.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "App Store App.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		015927E422758F1E0083EB23 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		015927E622758F1E0083EB23 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		015927E922758F1E0083EB23 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		015927EB22758F200083EB23 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		015927EE22758F200083EB23 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -56,6 +64,47 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		0129C135227A304600D8091A /* Apps */ = {
+			isa = PBXGroup;
+			children = (
+				0129C13C227A316300D8091A /* AppCollectionViewController.swift */,
+				0129C145227A385500D8091A /* HorizontalController.swift */,
+			);
+			path = Apps;
+			sourceTree = "<group>";
+		};
+		0129C136227A305000D8091A /* Search */ = {
+			isa = PBXGroup;
+			children = (
+				015927FE2275B0A90083EB23 /* AppSearchController.swift */,
+			);
+			path = Search;
+			sourceTree = "<group>";
+		};
+		0129C137227A305D00D8091A /* Tab */ = {
+			isa = PBXGroup;
+			children = (
+				015927FC227591AE0083EB23 /* BaseTabBarController.swift */,
+			);
+			path = Tab;
+			sourceTree = "<group>";
+		};
+		0129C13E227A343000D8091A /* Apps */ = {
+			isa = PBXGroup;
+			children = (
+				0129C13F227A344A00D8091A /* AppsGroupCell.swift */,
+			);
+			path = Apps;
+			sourceTree = "<group>";
+		};
+		0129C147227A388400D8091A /* Search */ = {
+			isa = PBXGroup;
+			children = (
+				015928002275B5370083EB23 /* AppSearchCell.swift */,
+			);
+			path = Search;
+			sourceTree = "<group>";
+		};
 		014DBA2A2277154A0010FA97 /* Services */ = {
 			isa = PBXGroup;
 			children = (
@@ -112,9 +161,11 @@
 		015927F622758F3F0083EB23 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
-				015927E622758F1E0083EB23 /* ViewController.swift */,
-				015927FC227591AE0083EB23 /* BaseTabBarController.swift */,
-				015927FE2275B0A90083EB23 /* AppSearchController.swift */,
+				0129C137227A305D00D8091A /* Tab */,
+				0129C136227A305000D8091A /* Search */,
+				0129C135227A304600D8091A /* Apps */,
+				0129C13A227A30B200D8091A /* BaseCollectionVC.swift */,
+				0129C141227A34D700D8091A /* ViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -122,7 +173,8 @@
 		015927F722758F460083EB23 /* View */ = {
 			isa = PBXGroup;
 			children = (
-				015928002275B5370083EB23 /* AppSearchCell.swift */,
+				0129C147227A388400D8091A /* Search */,
+				0129C13E227A343000D8091A /* Apps */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -130,6 +182,7 @@
 		015927F822758F4C0083EB23 /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
+				016A46042276E00700386E39 /* 05 UIView+Layout.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -137,7 +190,6 @@
 		016A46032276DEF000386E39 /* Helpers */ = {
 			isa = PBXGroup;
 			children = (
-				016A46042276E00700386E39 /* 05 UIView+Layout.swift */,
 				016A46062276FD5A00386E39 /* VerticalStackView.swift */,
 			);
 			path = Helpers;
@@ -245,13 +297,13 @@
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-App Store App/Pods-App Store App-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
-				"${BUILT_PRODUCTS_DIR}/AlamofireImage/AlamofireImage.framework",
+				"${BUILT_PRODUCTS_DIR}/SDWebImage/SDWebImage.framework",
 				"${BUILT_PRODUCTS_DIR}/SwiftyJSON/SwiftyJSON.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/AlamofireImage.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SDWebImage.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftyJSON.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -284,12 +336,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0129C13D227A316300D8091A /* AppCollectionViewController.swift in Sources */,
+				0129C146227A385500D8091A /* HorizontalController.swift in Sources */,
 				015928012275B5370083EB23 /* AppSearchCell.swift in Sources */,
-				015927E722758F1E0083EB23 /* ViewController.swift in Sources */,
 				014DBA2F2277173B0010FA97 /* SearchResult.swift in Sources */,
 				015927E522758F1E0083EB23 /* AppDelegate.swift in Sources */,
+				0129C13B227A30B300D8091A /* BaseCollectionVC.swift in Sources */,
+				0129C140227A344A00D8091A /* AppsGroupCell.swift in Sources */,
 				015927FD227591AE0083EB23 /* BaseTabBarController.swift in Sources */,
 				016FE4F222784A2800D06BBF /* Constants.swift in Sources */,
+				0129C142227A34D700D8091A /* ViewController.swift in Sources */,
 				016A46052276E00700386E39 /* 05 UIView+Layout.swift in Sources */,
 				015927FF2275B0A90083EB23 /* AppSearchController.swift in Sources */,
 				016A46072276FD5A00386E39 /* VerticalStackView.swift in Sources */,

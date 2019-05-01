@@ -7,6 +7,6 @@ target 'App Store App' do
 
   # Pods for App Store App
   pod 'Alamofire', '4.8.0'
-  pod 'AlamofireImage', '~> 3.5.0'
   pod 'SwiftyJSON', '3.1.4'
+  pod 'SDWebImage'
 end
