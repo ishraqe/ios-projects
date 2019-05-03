@@ -8,7 +8,7 @@ class BaseTabBarController: UITabBarController {
         
         
         viewControllers = [
-            makeTabController(viewController: AppCollectionViewController(collectionViewLayout: UICollectionViewFlowLayout()), title: "Apps", imageName: "apps"),
+            makeTabController(viewController: AppsPageController(collectionViewLayout: UICollectionViewFlowLayout()), title: "Apps", imageName: "apps"),
             makeTabController(viewController: AppSearchController(collectionViewLayout: UICollectionViewFlowLayout()), title: "Search", imageName: "search"),
             makeTabController(viewController: UIViewController() , title: "Today", imageName: "today")
         ]
