@@ -31,13 +31,7 @@ class AppRowCell: UICollectionViewCell {
         
         imageView.constrainWidth(constant: 64)
         imageView.constrainHeight(constant: 64)
-        imageView.backgroundColor = .green
-        
-        
-        
-        
-        
-        
+
         getButton.backgroundColor = UIColor(white: 0.95, alpha: 1)
         getButton.constrainHeight(constant: 32)
         getButton.constrainWidth(constant: 80)

@@ -1,4 +1,3 @@
-
 import UIKit
 
 class AppsPageController: BaseCollectionVC, UICollectionViewDelegateFlowLayout {
@@ -8,6 +7,61 @@ class AppsPageController: BaseCollectionVC, UICollectionViewDelegateFlowLayout {
     override func viewDidLoad() {
         super.viewDidLoad()
         setupCollectionView()
+        fetchAppSectionData()
+    }
+
+    var appsGroups = [AppsGroup]()
+    var socialApps = [SocialApp]()
+    
+    
+    fileprivate func fetchAppSectionData(){
+        var group1: AppsGroup?
+        var group2: AppsGroup?
+        var group3: AppsGroup?
+        
+        let dispatchGroup = DispatchGroup()
+        
+        dispatchGroup.enter()
+        DataService.instance.getAppHeaderData { (app, err) in
+            dispatchGroup.leave()
+            self.socialApps = app as! [SocialApp]
+        }
+        
+        dispatchGroup.enter()
+        DataService.instance.getAppsGamesData { (appsGroup, err) in
+            dispatchGroup.leave()
+              print("group 1")
+            group1 = appsGroup
+        }
+        
+        dispatchGroup.enter()
+        DataService.instance.topFreeApp { (appsGroup, error) in
+            dispatchGroup.leave()
+              print("group 2")
+           group2 = appsGroup
+        }
+        
+        dispatchGroup.enter()
+        DataService.instance.topGrossingApp { (appsGroup, error) in
+            dispatchGroup.leave()
+            print("group 3")
+            group3 = appsGroup
+        }
+        
+        dispatchGroup.notify(queue: .main){
+            print("All dispatch complete")
+            
+            if let group = group1 {
+                self.appsGroups.append(group)
+            }
+            if let group = group2 {
+                self.appsGroups.append(group)
+            }
+            if let group = group3 {
+                self.appsGroups.append(group)
+            }
+            self.collectionView.reloadData()
+        }
     }
     
     func setupCollectionView() {
@@ -24,7 +78,10 @@ class AppsPageController: BaseCollectionVC, UICollectionViewDelegateFlowLayout {
     // 2 Header
     override func collectionView(_ collectionView: UICollectionView, viewForSupplementaryElementOfKind kind: String, at indexPath: IndexPath) -> UICollectionReusableView {
         
-        let header = collectionView.dequeueReusableSupplementaryView(ofKind: kind, withReuseIdentifier: headerId, for: indexPath)
+        let header = collectionView.dequeueReusableSupplementaryView(ofKind: kind, withReuseIdentifier: headerId, for: indexPath) as! AppsHeader
+        
+        header.appheaderHorizontalController.socialApp = self.socialApps
+        header.appheaderHorizontalController.collectionView.reloadData()
         
         return header
     }
@@ -36,11 +93,14 @@ class AppsPageController: BaseCollectionVC, UICollectionViewDelegateFlowLayout {
     
     
     override func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return 5
+        return appsGroups.count
     }
     override func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: cellId, for: indexPath)
-        
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: cellId, for: indexPath) as! AppsGroupCell
+        let apps = appsGroups[indexPath.row]
+        cell.titleLabel.text = apps.feed.title
+        cell.horizontalVC.appsGroup = apps
+        cell.horizontalVC.collectionView.reloadData()
         return cell
     }
     

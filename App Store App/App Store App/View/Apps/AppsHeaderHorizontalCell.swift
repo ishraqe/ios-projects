@@ -3,9 +3,9 @@ import UIKit
 
 class AppsHeaderHorizontalCell: UICollectionViewCell {
    
-    let companyLbl = UILabel(title: "Facebook", fontSize: .boldSystemFont(ofSize: 8))
+    let companyLbl = UILabel(title: "Facebook", fontSize: .boldSystemFont(ofSize: 12))
     
-    let titleLbl =  UILabel(title: "Keeping up with a friend is faster than ever", fontSize: .systemFont(ofSize: 80))
+    let titleLbl =  UILabel(title: "Keeping up with a friend is faster than ever", fontSize: .systemFont(ofSize: 40))
 
     
     
@@ -17,7 +17,6 @@ class AppsHeaderHorizontalCell: UICollectionViewCell {
         companyLbl.textColor = .blue
         titleLbl.numberOfLines = 2
         
-        imageView.backgroundColor =  .yellow
         
         
         let stackView = VerticalStackView(arrangedSubViews: [companyLbl, titleLbl, imageView], spacing: 12)
