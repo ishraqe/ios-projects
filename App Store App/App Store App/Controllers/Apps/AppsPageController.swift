@@ -4,9 +4,21 @@ class AppsPageController: BaseCollectionVC, UICollectionViewDelegateFlowLayout {
     let cellId = "id"
     let headerId = "id"
     
+    let activityInicator : UIActivityIndicatorView = {
+        let av = UIActivityIndicatorView(style: .whiteLarge)
+        av.color = .black
+        av.startAnimating()
+        av.hidesWhenStopped = true
+        return av
+    }()
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         setupCollectionView()
+        view.addSubview(activityInicator)
+        activityInicator.fillSuperview()
+        
         fetchAppSectionData()
     }
 
@@ -50,7 +62,7 @@ class AppsPageController: BaseCollectionVC, UICollectionViewDelegateFlowLayout {
         
         dispatchGroup.notify(queue: .main){
             print("All dispatch complete")
-            
+            self.activityInicator.stopAnimating()
             if let group = group1 {
                 self.appsGroups.append(group)
             }
